@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import Dashboard from './containers/Dashboard';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <p>Let's go!</p>
+    <div>
+    <h1>"Let's go!" said David</h1>
     </div>
   );
 }
