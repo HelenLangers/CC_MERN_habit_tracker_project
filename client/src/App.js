@@ -1,10 +1,22 @@
 import Dashboard from './containers/Dashboard';
-import './App.css';
+import { useState, useEffect } from 'react';
+import { getEntries } from './TrackerService';
 
 function App() {
+
+  const [entries, setEntries] = useState ([])
+
+  useEffect (()=>{
+    getEntries()
+    .then((data)=>{
+      console.log('Here is the data:', data)
+      setEntries(data)
+    })
+  }, [])
+
   return (
     <div>
-    <h1>"Let's go!" said David</h1>
+    <Dashboard/>
     </div>
   );
 }
