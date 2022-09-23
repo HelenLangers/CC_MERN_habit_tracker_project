@@ -5,6 +5,7 @@ import { getEntries, addEntry } from './TrackerService';
 function App() {
 
   const [entries, setEntries] = useState ([])
+  const [recipes, setRecipes] = useState([])
 
   useEffect (()=>{
     getEntries()
@@ -14,11 +15,12 @@ function App() {
     })
   }, [])
 
-  // const addNewEntry = (entry)=>{
-  //   addEntry(entry)
-  //   .then(savedEntry => setEntries([...entries, savedEntry]))
-  // }
+  const addNewEntry = (entry)=>{
+    addEntry(entry)
+    .then(savedEntry => setEntries([...entries, savedEntry]))
+  }
 
+  
   
 
   return (
