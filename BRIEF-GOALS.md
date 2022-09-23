@@ -23,5 +23,6 @@ A user should be able to:
 
 # Extensions
 * Add in a recipe list using an API
+* Be able to add a recipe to a favourite recipe list and view that list
 * Split total meals into a daily meal list
 * When a meal is added to the user's database, a date must be added (date.now)
