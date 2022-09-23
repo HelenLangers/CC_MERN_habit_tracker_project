@@ -1,6 +1,6 @@
 import Dashboard from './containers/Dashboard';
 import { useState, useEffect } from 'react';
-import { getEntries } from './TrackerService';
+import { getEntries, addEntry } from './TrackerService';
 
 function App() {
 
@@ -13,6 +13,13 @@ function App() {
       setEntries(data)
     })
   }, [])
+
+  const addNewEntry = (entry)=>{
+    addEntry(entry)
+    .then(savedEntry => setEntries([...entries, savedEntry]))
+  }
+
+  
 
   return (
     <div>
