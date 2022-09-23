@@ -14,16 +14,16 @@ function App() {
     })
   }, [])
 
-  const addNewEntry = (entry)=>{
-    addEntry(entry)
-    .then(savedEntry => setEntries([...entries, savedEntry]))
-  }
+  // const addNewEntry = (entry)=>{
+  //   addEntry(entry)
+  //   .then(savedEntry => setEntries([...entries, savedEntry]))
+  // }
 
   
 
   return (
     <div>
-    <Dashboard/>
+    <Dashboard entries={entries}/>
     </div>
   );
 }
