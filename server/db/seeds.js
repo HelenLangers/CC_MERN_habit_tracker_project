@@ -38,30 +38,3 @@ db.entries.insertMany([
         notes: "Chips..... on the side",
     }
 ]);
-
-db.recipes.insertMany([
-    {
-        name: "Pasta Bolognese",
-        ingredients: "a few ingredients here for pasta bolognese"
-    },
-    {
-        name: "Macaroni Cheese",
-        ingredients: "a few ingredients here for macaroni cheese"
-    },
-    {
-        name: "Fish Tacos",
-        ingredients: "a few ingredients here for fish tacos"
-    },
-    {
-        name: "Chicken Teriyaki",
-        ingredients: "a few ingredients here for chicken teriyaki"
-    },
-    {
-        name: "Omelette du fromage",
-        ingredients: "a few ingredients here for a cheese omelette"
-    },
-    {
-        name: "Cheese and Egg stirfry",
-        ingredients: "a few ingredients here for cheese and egg stirfry"
-    },
-]);
