@@ -4,37 +4,37 @@ db.dropDatabase();
 db.entries.insertMany([
     {
         recipeName: "Pasta Bolognese",
-        date: "Thursday 22nd September",
+        date: "2022-09-24",
         notes: "Absolutely delicious, 10/10 would cook again",
     },
     {
         recipeName: "Macaroni Cheese",
-        date: "Wednesday 21st September",
+        date: "2022-09-24",
         notes: "Nice notes",
     },
     {
         recipeName: "Fish Tacos",
-        date: "Tuesday 20th September",
+        date: "2022-09-21",
         notes: "Fiiiiiiish, something fishy about this meal",
     },
     {
         recipeName: "Chicken Teriyaki",
-        date: "Sunday 18th September",
+        date: "2022-09-19",
         notes: "Yum",
     },
     {
         recipeName: "Omelette du fromage",
-        date: "Saturday 17th September",
+        date: "2022-09-23",
         notes: "That's all you can say",
     },
     {
         recipeName: "Cheese and egg stir fry",
-        date: "Wednesday 15th October",
+        date: "2022-09-25",
         notes: "Mmmmm comfort food",
     },
     {
         recipeName: "Glasgow Salad",
-        date: "Monday 15th November",
+        date: "2022-09-20",
         notes: "Chips..... on the side",
     }
 ]);

@@ -1,6 +1,7 @@
 import Dashboard from './containers/Dashboard';
 import { useState, useEffect } from 'react';
 import { getEntries, addEntry } from './TrackerService';
+import CalendarWrapper from './components/CalendarWrapper';
 
 function App() {
 
@@ -10,7 +11,6 @@ function App() {
   useEffect (()=>{
     getEntries()
     .then((data)=>{
-      console.log('Here is the data:', data)
       setEntries(data)
     })
   }, [])
@@ -36,6 +36,7 @@ function App() {
 
   return (
     <div>
+    <CalendarWrapper entries={entries}/>
     <Dashboard entries={entries} recipes={recipes}/>
     </div>
   );
