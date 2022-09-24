@@ -1,4 +1,5 @@
 import React from 'react'
+import './EntrySelector.css'
 
 const EntrySelector = ({entries, onEntrySelect}) => {
 
@@ -7,7 +8,7 @@ const EntrySelector = ({entries, onEntrySelect}) => {
   }
 
   return (
-    <div>
+    <div className='entrySelector'>
     <select defaultValue="" onChange={handleChange}>
         <option value="" disabled>Select Date</option>{
             entries.map( entry => {

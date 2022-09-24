@@ -24,3 +24,20 @@
     float: none;
 }
 
+.navlist :hover {
+    background-color: rgb(46, 153, 224);
+}
+
+@media (max-width: 800px) {
+    .nav_links {
+        display: none;
+    }
+    .NavBar {
+        background: none;
+    }
+}
+
+
+
+
+

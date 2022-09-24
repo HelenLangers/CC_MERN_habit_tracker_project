@@ -6,24 +6,24 @@ import './NavBar.css';
 const NavBar = () => {
 
   return (
-    <header>
-      <nav>
-        <ul className="NavBar">
+      <nav className="NavBar">
+        <div>
+        <ul>
           <li className="navlist">
             <Link to="/" className="nav_links">Dashboard</Link>
           </li>
           <li className="navlist">
-            <Link to="/" className="nav_links">Surprise Me!</Link>
+            <Link to="/" className="nav_links">Random recipe!</Link>
           </li>
           <li className="navlist">
-            <Link to="/entries" className="nav_links">Show Entries</Link>
+            <Link to="/entries" className="nav_links">Show entries</Link>
           </li>
           <li className="navlist">
             <Link to="/" className="nav_links">Recipe List</Link>
           </li>
         </ul>
+        </div>
       </nav>
-    </header>
   );
 }
 
