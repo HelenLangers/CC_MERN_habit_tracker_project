@@ -14,16 +14,16 @@ const Header = () => {
       <div className='navbarlinks'>
         <ul>
           <li className="">
-            <Link to="/" className="">Dashboard</Link>
+            <Link to="/" className="" onClick={() => setShowMenu(!showMenu)}>Dashboard</Link>
           </li>
           <li className="">
-            <Link to="/" className="">Random recipe!</Link>
+            <Link to="/" className="" onClick={() => setShowMenu(!showMenu)}>Random recipe!</Link>
           </li>
           <li className="">
-            <Link to="/entries" className="">Show entries</Link>
+            <Link to="/entries" className="" onClick={() => setShowMenu(!showMenu)}>Show entries</Link>
           </li>
           <li className="">
-            <Link to="/" className="">Recipe List</Link>
+            <Link to="/" className="" onClick={() => setShowMenu(!showMenu)}>Recipe List</Link>
           </li>
         </ul>
       </div>

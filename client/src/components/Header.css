@@ -46,7 +46,7 @@ header h1 {
     .navbarlinks ul {
         width:100%;
         flex-direction: column;
-        background-color: rgb(243, 117, 243);
+        background-color: transparent rgb(243, 117, 243);
         color: white;
     }
 
@@ -55,18 +55,19 @@ header h1 {
     margin-left: 1.5rem;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
+    text-align: center;
     }
 
     .navbarlinks a {
         text-decoration: none;
-        color: rgb(68, 68, 68);
+        color: rgb(68, 162, 225);
         font-weight: 500;
-        transition: color 6s ease-in-out;
+        transition: color 0.1s ease-in-out;
       }
 
     .navbarlinks a:hover {
-        color: #117964;
-        transition: color 0.3s ease-in-out;
+        color: white;
+        transition: color 0.1s ease-in-out;
       }
 }
 
