@@ -2,6 +2,8 @@ import Dashboard from './containers/Dashboard';
 import EntrySelector from './components/EntrySelector';
 import ShowEntry from './components/ShowEntry';
 import NavBar from './components/NavBar';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import { getEntries, addEntry } from './TrackerService';
 
@@ -44,7 +46,9 @@ function App() {
 
   return (
     <div>
+    <Router>
     <NavBar/>
+    </Router>
     <EntrySelector entries={entries} onEntrySelect={onEntrySelect}/>
     <ShowEntry selectedEntry={selectedEntry}/>
     <Dashboard entries={entries} recipes={recipes}/>
