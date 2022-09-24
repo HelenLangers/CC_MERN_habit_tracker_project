@@ -1,10 +1,15 @@
 import Dashboard from './containers/Dashboard';
+import EntrySelector from './components/EntrySelector';
+import ShowEntry from './components/ShowEntry';
+import NavBar from './components/NavBar';
 import { useState, useEffect } from 'react';
 import { getEntries, addEntry } from './TrackerService';
 
 function App() {
 
   const [entries, setEntries] = useState ([])
+  const [selectedEntryId, setSelectedEntryId] =  useState('')
+
   const [recipes, setRecipes] = useState([])
 
   useEffect (()=>{
@@ -31,11 +36,17 @@ function App() {
   //   .then(savedEntry => setEntries([...entries, savedEntry]))
   // }
 
+  const onEntrySelect = id => {
+    setSelectedEntryId(id)
+  }
   
-  
+  const selectedEntry = entries.find(entry => entry._id === selectedEntryId)
 
   return (
     <div>
+    <NavBar/>
+    <EntrySelector entries={entries} onEntrySelect={onEntrySelect}/>
+    <ShowEntry selectedEntry={selectedEntry}/>
     <Dashboard entries={entries} recipes={recipes}/>
     </div>
   );
