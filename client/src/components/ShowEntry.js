@@ -1,4 +1,5 @@
 import React from 'react'
+import './ShowEntry.css'
 
 const ShowEntry = ({selectedEntry}) => {
 
@@ -7,10 +8,10 @@ const ShowEntry = ({selectedEntry}) => {
   }
 
   return (
-    <div>
+    <div className='selectedEntry'>
       <h3>{selectedEntry.recipeName}</h3>
       <p>{selectedEntry.date}</p>
-      <p>{selectedEntry.notes}</p>
+      <p>Notes: {selectedEntry.notes}</p>
     </div>
   )
 }

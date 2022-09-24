@@ -7,7 +7,7 @@ const EntrySelector = ({entries, onEntrySelect}) => {
   }
 
   return (
-    <div><p>Select Entry:</p>
+    <div>
     <select defaultValue="" onChange={handleChange}>
         <option value="" disabled>Select Date</option>{
             entries.map( entry => {

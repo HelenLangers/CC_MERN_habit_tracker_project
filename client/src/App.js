@@ -1,7 +1,8 @@
 import Dashboard from './containers/Dashboard';
-import EntrySelector from './components/EntrySelector';
-import ShowEntry from './components/ShowEntry';
+import EntryList from './containers/EntryList';
 import NavBar from './components/NavBar';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
@@ -46,12 +47,15 @@ function App() {
 
   return (
     <div>
+    <Header/>
     <Router>
-    <NavBar/>
+      <NavBar/>
+      <Routes>
+        <Route path='/' element={<Dashboard entries={entries} recipes={recipes}/>}/>
+        <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry}/>}/>
+      </Routes>
     </Router>
-    <EntrySelector entries={entries} onEntrySelect={onEntrySelect}/>
-    <ShowEntry selectedEntry={selectedEntry}/>
-    <Dashboard entries={entries} recipes={recipes}/>
+    <Footer/>
     </div>
   );
 }

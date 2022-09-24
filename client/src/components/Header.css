@@ -1,0 +1,16 @@
+header h1 {
+    font-size: 60px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #5f37d8, #eeeaf3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    margin-bottom: -25px;
+  }
+
+.header {
+    text-align: center;
+    font-family: cursive;
+    font-size: 22px;
+}

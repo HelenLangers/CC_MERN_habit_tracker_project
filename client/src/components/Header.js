@@ -1,8 +1,12 @@
 import React from 'react'
+import './Header.css';
 
 const Header = () => {
   return (
-    <div>header</div>
+    <header>
+      <h1>Holy Shiitake!</h1>
+      <p className='header'>a mindful eating app...</p>
+    </header>
   )
 }
 
