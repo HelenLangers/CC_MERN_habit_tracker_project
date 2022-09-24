@@ -47,8 +47,8 @@ function App() {
 
   return (
     <div>
-    <Header/>
     <Router>
+    <Header/>
       <NavBar/>
       <Routes>
         <Route path='/' element={<Dashboard entries={entries} recipes={recipes}/>}/>

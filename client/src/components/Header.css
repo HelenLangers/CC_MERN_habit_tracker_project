@@ -35,8 +35,49 @@ header h1 {
 @media (max-width: 800px) {
     .toggle-button {
         display: flex;
-    } 
+    }
+
+    .navbarlinks {
+    order: 2;
+    display: flex;
+    margin: 2rem;
+    }
+
+    .navbarlinks ul {
+        width:100%;
+        flex-direction: column;
+        background-color: rgb(243, 117, 243);
+        color: white;
+    }
+
+    .navbarlinks li {
+    list-style: none;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    }
+
+    .navbarlinks a {
+        text-decoration: none;
+        color: rgb(68, 68, 68);
+        font-weight: 500;
+        transition: color 6s ease-in-out;
+      }
+
+    .navbarlinks a:hover {
+        color: #117964;
+        transition: color 0.3s ease-in-out;
+      }
 }
+
+
+  
+ 
+  
+  
+  
+
+
 
 
 

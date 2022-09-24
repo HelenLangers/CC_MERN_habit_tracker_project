@@ -10,8 +10,8 @@ const Header = () => {
 
   if(showMenu){
     menu = 
-      <nav className="">
-        <div>
+      
+      <div className='navbarlinks'>
         <ul>
           <li className="">
             <Link to="/" className="">Dashboard</Link>
@@ -22,15 +22,17 @@ const Header = () => {
           <li className="">
             <Link to="/entries" className="">Show entries</Link>
           </li>
-          <li className="navlist">
+          <li className="">
             <Link to="/" className="">Recipe List</Link>
           </li>
         </ul>
-        </div>
-      </nav>
+      </div>
+      
   }
 
   return (
+    <>
+    {menu}
     <header>
       <a href='#' className="toggle-button" onClick={() => setShowMenu(!showMenu)} >
           <span className="bar"></span>
@@ -40,8 +42,8 @@ const Header = () => {
       </a>
       <h1>Holy Shiitake!</h1>
       <p className='header'>a mindful eating app...</p>
-      {menu}
     </header>
+    </>
   )
 }
 
