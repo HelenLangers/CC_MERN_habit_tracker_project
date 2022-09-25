@@ -3,10 +3,11 @@ import EntryList from './containers/EntryList';
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Form from './components/Form';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import { getEntries, addEntry } from './TrackerService';
+import { getEntries, postEntry } from './TrackerService';
 import CalendarWrapper from './components/CalendarWrapper';
 
 function App() {
@@ -34,10 +35,10 @@ function App() {
       .then(recipes => setRecipes(recipes.hits))
   }
 
-  // const addNewEntry = (entry)=>{
-  //   addEntry(entry)
-  //   .then(savedEntry => setEntries([...entries, savedEntry]))
-  // }
+  const addNewEntry = (entry)=>{
+    postEntry(entry)
+    .then(savedEntry => setEntries([...entries, savedEntry]))
+  }
 
   const onEntrySelect = id => {
     setSelectedEntryId(id)
@@ -55,6 +56,7 @@ function App() {
         <Route path='/' element={<Dashboard entries={entries} recipes={recipes}/>}/>
         <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry}/>}/>
         <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
+        <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)}/>}/>
       </Routes>
     </Router>
     <Footer/>
