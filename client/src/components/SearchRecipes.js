@@ -11,6 +11,7 @@ const SearchRecipes = ({recipes, setQuery }) => {
   const submitSearch = (event) => {
     event.preventDefault()
     setQuery(search)
+    setSearch('')
   }
 
   const handleSearchBarChange = (event) => {
