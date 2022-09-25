@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react';
 import { getEntries, addEntry } from './TrackerService';
 import CalendarWrapper from './components/CalendarWrapper';
 import SearchRecipes from './components/SearchRecipes';
+import RandomRecipe from './components/RandomRecipe';
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
 
   const [recipes, setRecipes] = useState([])
   const [query, setQuery] = useState('')
+  const [dietQuery, setDietQuery] = useState('')
+  const [randomRecipe, setRandomrecipe] = useState([])
 
   useEffect (()=>{
     getEntries()
@@ -30,13 +33,24 @@ function App() {
     getRecipes();
   }, [query])
 
+  useEffect(() => {
+    getRandomRecipe();
+  }, [dietQuery])
+
+
   const appId= config.app_id
   const myKey= config.app_key
 
   const getRecipes = function(){
-      fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + query + '&app_id=' + appId + '&app_key=' + myKey)
+      fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + query + '&app_id=' + appId + '&app_key=' + myKey + '&diet=balanced')
       .then(res => res.json())
       .then(recipes => setRecipes(recipes.hits))
+  }
+
+  const getRandomRecipe = function(){
+      fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + dietQuery + '&app_id=' + appId + '&app_key=' + myKey + '&diet=balanced&random=true')
+      .then(res => res.json())
+      .then(recipe => setRandomrecipe(recipe.hits[0].recipe))
   }
 
   // const addNewEntry = (entry)=>{
@@ -61,6 +75,7 @@ function App() {
         <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry}/>}/>
         <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
         <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
+        <Route path='/randomiser' element={<RandomRecipe recipe={randomRecipe} setDietQuery={setDietQuery}/>}/>
       </Routes>
     </Router>
     <Footer/>
