@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import { getEntries, addEntry } from './TrackerService';
+import CalendarWrapper from './components/CalendarWrapper';
 
 function App() {
 
@@ -18,7 +19,6 @@ function App() {
   useEffect (()=>{
     getEntries()
     .then((data)=>{
-      console.log('Here is the data:', data)
       setEntries(data)
     })
   }, [])
@@ -47,12 +47,14 @@ function App() {
 
   return (
     <div>
+
     <Router>
     <Header/>
       <NavBar/>
       <Routes>
         <Route path='/' element={<Dashboard entries={entries} recipes={recipes}/>}/>
         <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry}/>}/>
+        <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
       </Routes>
     </Router>
     <Footer/>
