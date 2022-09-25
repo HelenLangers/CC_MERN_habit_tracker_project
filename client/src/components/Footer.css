@@ -1,0 +1,16 @@
+
+
+.FooterBar{  
+    padding:0;  
+    background:rgb(67, 204, 228);  
+    font-family:Arial, sans serif;  
+    font-size:15px;  
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    list-style: none;
+    color: white;
+}
+
