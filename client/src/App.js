@@ -4,10 +4,11 @@ import NavBar from './components/NavBar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import config from './config.js';
+import Form from './components/Form';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import { getEntries, addEntry } from './TrackerService';
+import { getEntries, postEntry } from './TrackerService';
 import CalendarWrapper from './components/CalendarWrapper';
 import SearchRecipes from './components/SearchRecipes';
 import RandomRecipe from './components/RandomRecipe';
@@ -58,6 +59,11 @@ function App() {
   //   .then(savedEntry => setEntries([...entries, savedEntry]))
   // }
 
+  const addNewEntry = (entry)=>{
+    postEntry(entry)
+    .then(savedEntry => setEntries([...entries, savedEntry]))
+  }
+
   const onEntrySelect = id => {
     setSelectedEntryId(id)
   }
@@ -76,6 +82,7 @@ function App() {
         <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
         <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
         <Route path='/randomiser' element={<RandomRecipe recipe={randomRecipe} setDietQuery={setDietQuery}/>}/>
+        <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)}/>}/>
       </Routes>
     </Router>
     <Footer/>

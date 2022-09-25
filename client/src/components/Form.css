@@ -1,0 +1,30 @@
+input[type=text]{
+    background-color: #B6C7D6;
+    width: 100%;
+    border-radius: 25px;
+    color: blue;
+    margin: auto;
+
+}
+input[type=submit]{
+    background-color: #B6C7D6;
+    width: 100%;
+    border-radius: 25px;
+    color: blue;
+    margin: auto;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+#form-container{
+    background-color: rgb(67, 204, 228);
+    border-radius: 25px;
+    border: 2px solid;
+    border-color: #B6C7D6;
+    padding: 20px;
+    width: 400px;
+    height: 150px;
+    margin: auto;
+}
