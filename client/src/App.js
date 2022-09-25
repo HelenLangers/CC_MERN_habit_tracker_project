@@ -17,7 +17,7 @@ function App() {
   const [selectedEntryId, setSelectedEntryId] =  useState('')
 
   const [recipes, setRecipes] = useState([])
-  const [query, setQuery] = useState('chicken')
+  const [query, setQuery] = useState('')
 
   useEffect (()=>{
     getEntries()
@@ -25,7 +25,6 @@ function App() {
       setEntries(data)
     })
   }, [])
-
 
   useEffect(() => {
     getRecipes();
@@ -61,7 +60,7 @@ function App() {
         <Route path='/' element={<Dashboard entries={entries} recipes={recipes}/>}/>
         <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry}/>}/>
         <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
-        <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes}/>}/>
+        <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
       </Routes>
     </Router>
     <Footer/>
