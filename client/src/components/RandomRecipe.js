@@ -23,8 +23,8 @@ const RandomRecipe = (recipe, setDietQuery) => {
             <form onSubmit={submitRandomSearch}>
                 <input type="radio" id="meat" name="diet" value="meat" onChange={handleRandomSubmit}/>
                 <label for="meat">Meat Eater</label>
-                <input type="radio" id="vegetables" name="diet" value="vegetables" onChange={handleRandomSubmit}/>
-                <label for="vegetables">Vegetarian</label>
+                <input type="radio" id="vegetarian" name="diet" value="vegetarian" onChange={handleRandomSubmit}/>
+                <label for="vegetarian">Vegetarian</label>
             <button type="submit">Suggest a dish</button>
             </form>
             </div>
