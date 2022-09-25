@@ -1,8 +1,12 @@
 import React from 'react'
+import ShowRecipe from './ShowRecipe'
 
-const SearchRecipes = () => {
+const SearchRecipes = ( recipes ) => {
+
   return (
-    <div>searchRecipes</div>
+    <div>
+    
+    </div>
   )
 }
 

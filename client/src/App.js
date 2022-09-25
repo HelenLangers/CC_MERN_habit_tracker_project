@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import { getEntries, addEntry } from './TrackerService';
 import CalendarWrapper from './components/CalendarWrapper';
+import SearchRecipes from './components/SearchRecipes';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
   const [selectedEntryId, setSelectedEntryId] =  useState('')
 
   const [recipes, setRecipes] = useState([])
+  const [query, setQuery] = useState('chicken')
 
   useEffect (()=>{
     getEntries()
@@ -27,13 +29,13 @@ function App() {
 
   useEffect(() => {
     getRecipes();
-  }, [])
+  }, [query])
 
-  let appId= config.app_id
-  let myKey= config.app_key
+  const appId= config.app_id
+  const myKey= config.app_key
 
   const getRecipes = function(){
-      fetch('https://api.edamam.com/api/recipes/v2?type=public&q=pasta&app_id=' + appId + '&app_key=' + myKey)
+      fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + query + '&app_id=' + appId + '&app_key=' + myKey)
       .then(res => res.json())
       .then(recipes => setRecipes(recipes.hits))
   }
@@ -59,6 +61,7 @@ function App() {
         <Route path='/' element={<Dashboard entries={entries} recipes={recipes}/>}/>
         <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry}/>}/>
         <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
+        <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes}/>}/>
       </Routes>
     </Router>
     <Footer/>
