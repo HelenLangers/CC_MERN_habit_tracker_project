@@ -1,5 +1,5 @@
-* {
-    box-sizing: border-box;
+* { 
+    box-sizing: border-box; 
 }
 
 .search-page {
@@ -8,57 +8,52 @@
     align-items: center;
 }
 
-.search-form {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    box-sizing: border-box;
-    border-radius: 50px;
-    border: 4px solid #393e46;
-    padding: 5px;
-    background: #222831;
-    transition: all 1s;
+.wrapper {
+    display: flex;
+    /* border: solid #ea1414 5px; */
+    justify-content: center;
+    align-items: center;
+}
 
+.search-form {
+    width: 80%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-.search-icon {
-    top: 6px;
-    left: 8px;
-    width: 14px;
 }
 
 .search-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 42px;
-    line-height: 30px;
-    outline: 0;
-    border: 0;
-    font-size: 2rem;
-    border-radius: 20px;
-    padding: 0 20px;
-    margin: 0;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
+    position: relative;
+    padding: 15px 40px 15px 20px;
+    width: 20px;
+    color: #525252;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #FFFFFF 0%,#464747 #F9F9F9 100%);
+    transition: 1s;
+    outline: none;
+}
+    
+.search-bar:focus{ 
+    width: 100%; 
 }
 
-.search-form:hover {
-    width: 70%;
-    /* -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.74);
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.74); */
-    border: 4px solid #00adb5;
+i {
+    position: relative;
+    left: -37px;
+    color: #000;
 }
 
 .search-button {
-    visibility: hidden;
-}
+    background: rgb(67, 204, 228);
+    color: white;
+    line-height: 2.5rem;
+    border-radius: 5px;
+} 
 
 .search-results {
     display: flex;
@@ -66,17 +61,9 @@
     flex-wrap: wrap;
 }
 
+
 @media (max-width: 800px) {
     .wrapper {
         width: 90vw;
-    }
-
-    .search-bar {
-       width: 80%;
-       font-size: 1rem;
-    }
-
-    .search-bar:hover {
-        width: 100%;
     }
 }
