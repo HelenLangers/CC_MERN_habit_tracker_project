@@ -56,7 +56,7 @@ function App() {
         <Route path='/' element={<Dashboard entries={entries} recipes={recipes}/>}/>
         <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry}/>}/>
         <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
-        <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)}/>}/>
+        <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries}/>}/>
       </Routes>
     </Router>
     <Footer/>

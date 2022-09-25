@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Form.css'
 
-const Form = ({ onEntrySubmit }) => {
+const Form = ({ onEntrySubmit, entries }) => {
 
   const [recipe, setRecipe] = useState("");
   const [date, setDate] = useState("");
@@ -42,22 +42,23 @@ const Form = ({ onEntrySubmit }) => {
     <>
     <form onSubmit={handleFormSubmit} id="form-container">
       <input type="text"
-      placeholder='recipe'
+      placeholder='Recipe'
       value={recipe}
       onChange={handleRecipeChange}></input>
 
       <input type="text"
-      placeholder='date'
+      placeholder='Date'
       value={date}
       onChange={handleDateChange}></input>
 
       <input type="text" 
-      placeholder='notes'
+      placeholder='Notes'
       value={notes}
       onChange={handleNotesChange}></input>
 
       <input type="submit"
-      value="post"></input>
+
+      value="Submit"></input>
 
     </form>
     </>
