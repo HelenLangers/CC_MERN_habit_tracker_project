@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Form.css'
 
-const Form = () => {
+const Form = ({ onEntrySubmit }) => {
 
   const [recipe, setRecipe] = useState("");
   const [date, setDate] = useState("");
@@ -24,6 +24,18 @@ const Form = () => {
     const recipeToSubmit = recipe;
     const dateToSubmit = date;
     const notesToSubmit = notes
+    
+    onEntrySubmit({
+      recipeName: recipeToSubmit,
+      date: dateToSubmit,
+      notes: notesToSubmit
+    });
+
+    setRecipe("");
+    setDate("");
+    setNotes("");
+
+    // console.log(recipeToSubmit, dateToSubmit, notes)
   }
   
   return (

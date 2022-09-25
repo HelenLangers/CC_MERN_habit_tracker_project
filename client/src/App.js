@@ -7,7 +7,7 @@ import Form from './components/Form';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import { getEntries, addEntry } from './TrackerService';
+import { getEntries, postEntry } from './TrackerService';
 import CalendarWrapper from './components/CalendarWrapper';
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
   }
 
   const addNewEntry = (entry)=>{
-    addEntry(entry)
+    postEntry(entry)
     .then(savedEntry => setEntries([...entries, savedEntry]))
   }
 
@@ -56,7 +56,7 @@ function App() {
         <Route path='/' element={<Dashboard entries={entries} recipes={recipes}/>}/>
         <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry}/>}/>
         <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
-        <Route path='/form' element={<Form />}/>
+        <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)}/>}/>
       </Routes>
     </Router>
     <Footer/>
