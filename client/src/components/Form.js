@@ -40,7 +40,7 @@ const Form = ({ onEntrySubmit }) => {
   
   return (
     <>
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} id="form-container">
       <input type="text"
       placeholder='recipe'
       value={recipe}
