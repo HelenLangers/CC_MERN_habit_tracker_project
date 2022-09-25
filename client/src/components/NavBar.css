@@ -1,0 +1,43 @@
+
+
+.NavBar{  
+    padding:0;  
+    background:rgb(67, 204, 228);  
+    font-family:Arial, sans serif;  
+    font-size:20px;  
+    width: 100%;
+    text-align: center;
+}
+
+.nav_links {  
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color:white;  
+    text-decoration:none;
+    display: flex;
+}
+
+.navlist {
+    display: inline-block;
+    float: none;
+}
+
+.navlist :hover {
+    background-color: rgb(46, 153, 224);
+}
+
+@media (max-width: 800px) {
+    .nav_links {
+        display: none;
+    }
+    .NavBar {
+        background: none;
+    }
+}
+
+
+
+
+
