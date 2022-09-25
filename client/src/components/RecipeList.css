@@ -1,16 +1,29 @@
 .recipe {
     border-radius: 10px;
     margin: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background: ivory;
+    background: rgb(216, 243, 252);
     align-items: center;
-    min-width: 40%;
+    width: 25%;
+}
+
+.title {
+    text-align: center;
+    margin: 1rem;
 }
 
 .image {
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+    margin: 0 1rem 1rem 1rem;
+}
+
+@media (max-width: 800px) {
+    .recipe {
+        width: 80vw;
+    }
 }

@@ -17,9 +17,10 @@ const SearchRecipes = ({recipes, setQuery }) => {
   }
 
   return (
-    <div>
-    <div>
+    <div className="search-page">
+    <div className="wrapper">
       <form onSubmit={submitSearch} className="search-form">
+      <i className="fa-solid fa-magnifying-glass search-icon"></i>
         <input className="search-bar" 
         type="text" 
         placeholder="What do you want to eat?"

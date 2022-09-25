@@ -23,7 +23,7 @@ const Header = () => {
             <Link to="/entries" className="" onClick={() => setShowMenu(!showMenu)}>Show entries</Link>
           </li>
           <li className="">
-            <Link to="/" className="" onClick={() => setShowMenu(!showMenu)}>Recipe List</Link>
+            <Link to="/searchrecipes" className="" onClick={() => setShowMenu(!showMenu)}>Search Recipes</Link>
           </li>
         </ul>
       </div>
