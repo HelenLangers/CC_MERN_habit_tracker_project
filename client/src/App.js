@@ -18,7 +18,7 @@ function App() {
   const [selectedEntryId, setSelectedEntryId] =  useState('')
 
   const [recipes, setRecipes] = useState([])
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState('salad')
   const [dietQuery, setDietQuery] = useState('')
   const [randomRecipe, setRandomrecipe] = useState([])
 
