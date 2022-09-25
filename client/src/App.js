@@ -3,6 +3,7 @@ import EntryList from './containers/EntryList';
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import config from './config.js';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
@@ -28,8 +29,11 @@ function App() {
     getRecipes();
   }, [])
 
+  let appId= config.app_id
+  let myKey= config.app_key
+
   const getRecipes = function(){
-      fetch('https://api.edamam.com/api/recipes/v2?type=public&q=pasta&app_id=f56f77fd&app_key=f4f4f1660ed0c0457723b124104dcc76%20%09')
+      fetch('https://api.edamam.com/api/recipes/v2?type=public&q=pasta&app_id=' + appId + '&app_key=' + myKey)
       .then(res => res.json())
       .then(recipes => setRecipes(recipes.hits))
   }
