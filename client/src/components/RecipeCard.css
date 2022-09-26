@@ -1,0 +1,68 @@
+.front-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.paragraph {
+    margin: 1rem;
+}
+
+.back-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 350px;
+}
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0.5rem;
+    font-size: 1.25vh;
+    overflow: scroll;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(67, 204, 228);
+    color: white;
+    line-height: 2.5rem;
+    border-radius: 5px;
+    width: 6rem;
+    margin: 0 0.5rem;
+    border: rgb(75, 74, 74);
+    border-style: ridge;
+    border-width: 2px;
+}
+
+.submit-button {
+    background: rgb(67, 204, 228);
+    color: white;
+    line-height: 2.5rem;
+    border-radius: 5px;
+} 
+
+a {
+    color: #fff;
+    text-decoration: none;
+}

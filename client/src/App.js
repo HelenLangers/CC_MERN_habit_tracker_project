@@ -38,7 +38,6 @@ function App() {
     getRandomRecipe();
   }, [query])
 
-
   const appId= config.app_id
   const myKey= config.app_key
 
@@ -102,9 +101,7 @@ function App() {
  
         <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries}/>}/>
         <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
-       
         <Route path='/update/:id' element={<UpdateEntry selectedEntry={selectedEntry} entries={entries} entryToUpdate={entryToUpdate}/>}/>
-
       </Routes>
     </Router>
     <Footer/>

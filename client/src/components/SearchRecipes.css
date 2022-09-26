@@ -10,7 +10,6 @@
 
 .wrapper {
     display: flex;
-    /* border: solid #ea1414 5px; */
     justify-content: center;
     align-items: center;
 }
@@ -60,7 +59,6 @@ i {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
 
 @media (max-width: 800px) {
     .wrapper {

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import RecipeList from './RecipeList';
+import RecipeListItems from './RecipeListItems';
 import './SearchRecipes.css';
 
 const SearchRecipes = ({recipes, setQuery }) => {
@@ -38,9 +38,8 @@ const SearchRecipes = ({recipes, setQuery }) => {
 
     <div className="search-results">
       {recipes.map((recipe, index) => (
-        <RecipeList key={index}
-        title={recipe.recipe.label}
-        image={recipe.recipe.image}
+        <RecipeListItems key={index}
+        recipe={recipe}
         />
       ))}
       </div>
@@ -49,3 +48,6 @@ const SearchRecipes = ({recipes, setQuery }) => {
 }
 
 export default SearchRecipes
+
+
+
