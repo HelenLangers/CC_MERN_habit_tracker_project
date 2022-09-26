@@ -21,5 +21,6 @@ A user should be able to:
 
 
 # Extensions
+* Add a 'next page' to the search results 
 * Be able to add a recipe to a favourite recipe list for later use
 * Split total meals into a daily meal list

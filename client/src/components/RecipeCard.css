@@ -1,0 +1,23 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.paragraph {
+    margin: 1rem;
+}
