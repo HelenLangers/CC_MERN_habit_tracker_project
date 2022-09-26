@@ -54,10 +54,6 @@ function App() {
       .then(recipe => setRandomrecipe(recipe.hits[0].recipe))
   }
 
-  // const addNewEntry = (entry)=>{
-  //   addEntry(entry)
-  //   .then(savedEntry => setEntries([...entries, savedEntry]))
-  // }
 
   const addNewEntry = (entry)=>{
     postEntry(entry)
