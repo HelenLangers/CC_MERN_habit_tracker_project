@@ -17,13 +17,16 @@ const Header = () => {
             <Link to="/" className="" onClick={() => setShowMenu(!showMenu)}>Dashboard</Link>
           </li>
           <li className="">
-            <Link to="/" className="" onClick={() => setShowMenu(!showMenu)}>Random recipe!</Link>
+            <Link to="/randomiser" className="" onClick={() => setShowMenu(!showMenu)}>Random recipe!</Link>
           </li>
           <li className="">
             <Link to="/entries" className="" onClick={() => setShowMenu(!showMenu)}>Show entries</Link>
           </li>
           <li className="">
-            <Link to="/" className="" onClick={() => setShowMenu(!showMenu)}>Recipe List</Link>
+            <Link to="/searchrecipes" className="" onClick={() => setShowMenu(!showMenu)}>Search Recipes</Link>
+          </li>
+          <li className="">
+            <Link to="/form" className="" onClick={() => setShowMenu(!showMenu)}>Form</Link>
           </li>
         </ul>
       </div>

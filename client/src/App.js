@@ -3,12 +3,15 @@ import EntryList from './containers/EntryList';
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import config from './config.js';
 import Form from './components/Form';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import { getEntries, postEntry } from './TrackerService';
 import CalendarWrapper from './components/CalendarWrapper';
+import SearchRecipes from './components/SearchRecipes';
+import RandomRecipe from './components/RandomRecipe';
 
 function App() {
 
@@ -16,6 +19,9 @@ function App() {
   const [selectedEntryId, setSelectedEntryId] =  useState('')
 
   const [recipes, setRecipes] = useState([])
+  const [query, setQuery] = useState('salad')
+  const [dietQuery, setDietQuery] = useState('')
+  const [randomRecipe, setRandomrecipe] = useState([])
 
   useEffect (()=>{
     getEntries()
@@ -24,16 +30,34 @@ function App() {
     })
   }, [])
 
-
   useEffect(() => {
     getRecipes();
-  }, [])
+  }, [query])
+
+  useEffect(() => {
+    getRandomRecipe();
+  }, [dietQuery])
+
+
+  const appId= config.app_id
+  const myKey= config.app_key
 
   const getRecipes = function(){
-      fetch('https://api.edamam.com/api/recipes/v2?type=public&q=pasta&app_id=f56f77fd&app_key=f4f4f1660ed0c0457723b124104dcc76%20%09')
+      fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + query + '&app_id=' + appId + '&app_key=' + myKey + '&diet=balanced')
       .then(res => res.json())
       .then(recipes => setRecipes(recipes.hits))
   }
+
+  const getRandomRecipe = function(){
+      fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + dietQuery + '&app_id=' + appId + '&app_key=' + myKey + '&diet=balanced&random=true')
+      .then(res => res.json())
+      .then(recipe => setRandomrecipe(recipe.hits[0].recipe))
+  }
+
+  // const addNewEntry = (entry)=>{
+  //   addEntry(entry)
+  //   .then(savedEntry => setEntries([...entries, savedEntry]))
+  // }
 
   const addNewEntry = (entry)=>{
     postEntry(entry)
@@ -57,6 +81,8 @@ function App() {
         <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry}/>}/>
         <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
         <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries}/>}/>
+        <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
+        <Route path='/randomiser' element={<RandomRecipe recipe={randomRecipe} setDietQuery={setDietQuery}/>}/>
       </Routes>
     </Router>
     <Footer/>

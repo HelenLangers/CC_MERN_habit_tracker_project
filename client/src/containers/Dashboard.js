@@ -14,19 +14,10 @@ const Dashboard = ({entries, recipes}) => {
     )
   })
 
-  const recipesList = recipes.map((recipe)=>{
-    return (
-      <li key={recipe.recipe.uri}>
-        <h2>{recipe.recipe.label}</h2>
-      </li>
-    )
-  })
-
   return (
     <div>
       <ul>
         {entriesList}
-        {recipesList}
       </ul>
     </div>
   )

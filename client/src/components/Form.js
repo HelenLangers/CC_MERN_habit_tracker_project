@@ -41,23 +41,22 @@ const Form = ({ onEntrySubmit, entries }) => {
   return (
     <>
     <form onSubmit={handleFormSubmit} id="form-container">
-      <input type="text"
+      <input type="text" className="form-input" 
       placeholder='Recipe'
       value={recipe}
       onChange={handleRecipeChange}></input>
 
-      <input type="text"
+      <input type="text" className="form-input" 
       placeholder='Date'
       value={date}
       onChange={handleDateChange}></input>
 
-      <input type="text" 
+      <input type="text" className="form-input"  
       placeholder='Notes'
       value={notes}
       onChange={handleNotesChange}></input>
-
+      
       <input type="submit"
-
       value="Submit"></input>
 
     </form>
@@ -65,3 +64,4 @@ const Form = ({ onEntrySubmit, entries }) => {
     )
 }
 export default Form
+ 
