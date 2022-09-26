@@ -1,4 +1,5 @@
 import React from 'react'
+import Counter from '../components/Counter'
 
 const Dashboard = ({entries, recipes}) => {
   if(!entries) return <h2>Loading...</h2>
@@ -16,6 +17,7 @@ const Dashboard = ({entries, recipes}) => {
 
   return (
     <div>
+      <Counter entries={entries}/>
       <ul>
         {entriesList}
       </ul>
