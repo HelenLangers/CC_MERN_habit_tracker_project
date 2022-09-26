@@ -1,7 +1,7 @@
 import React from 'react'
 import './ShowEntry.css'
 
-const ShowEntry = ({selectedEntry, handleDelete, updateEntry}) => {
+const ShowEntry = ({selectedEntry, handleDelete}) => {
 
   if (!selectedEntry){
     return null
@@ -11,9 +11,7 @@ const ShowEntry = ({selectedEntry, handleDelete, updateEntry}) => {
     handleDelete(selectedEntry._id)
   }
 
-  const toUpdate = ()=>{
-    updateEntry(selectedEntry._id)
-  }
+
 
   return (
     <div className='selectedEntry'>
@@ -21,7 +19,7 @@ const ShowEntry = ({selectedEntry, handleDelete, updateEntry}) => {
       <p>{selectedEntry.date}</p>
       <p>Notes: {selectedEntry.notes}</p>
       <button onClick={deletedEntry}>Delete</button>
-      <button onClick={toUpdate}>Edit</button>
+      <button><a href='/update'>Edit</a></button>
     </div>
   )
 }
