@@ -1,26 +1,20 @@
 import React from 'react'
 import Counter from '../components/Counter'
+import Chart from '../components/Chart'
+import RandomRecipe from '../components/RandomRecipe'
 
-const Dashboard = ({entries, recipes}) => {
+const Dashboard = ({entries, recipe}) => {
   if(!entries) return <h2>Loading...</h2>
-  if(!recipes) return <h2>Loading...</h2>
+ 
 
-  const entriesList = entries.map((entry)=>{
-    return (
-      <li key={entry._id}>
-        <h2>{entry.recipeName}</h2>
-        <p>{entry.date}</p>
-        <p>{entry.notes}</p>
-      </li>
-    )
-  })
+
 
   return (
     <div>
       <Counter entries={entries}/>
-      <ul>
-        {entriesList}
-      </ul>
+      <Chart entries={entries}/>
+      <RandomRecipe recipe={recipe}/>
+     
     </div>
   )
 }
