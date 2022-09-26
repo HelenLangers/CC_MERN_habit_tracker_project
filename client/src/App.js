@@ -8,7 +8,7 @@ import Form from './components/Form';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import { getEntries, postEntry } from './TrackerService';
+import { deleteEntry, getEntries, postEntry } from './TrackerService';
 import CalendarWrapper from './components/CalendarWrapper';
 import SearchRecipes from './components/SearchRecipes';
 import RandomRecipe from './components/RandomRecipe';
@@ -70,6 +70,12 @@ function App() {
   
   const selectedEntry = entries.find(entry => entry._id === selectedEntryId)
 
+  const handleDelete = (id) =>{
+    deleteEntry(id)
+    setEntries(entries.filter(entry => entry._id !== id))
+  }
+
+
   return (
     <div>
 
@@ -78,7 +84,7 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path='/' element={<Dashboard entries={entries} recipes={recipes}/>}/>
-        <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry}/>}/>
+        <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry} handleDelete={handleDelete}/>}/>
         <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
         <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries}/>}/>
         <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
