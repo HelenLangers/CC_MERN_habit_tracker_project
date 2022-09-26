@@ -15,9 +15,10 @@ export const postEntry = (payload) => {
 }
 
 export const updateEntry = (entry) => {
-    return fetch(baseURL + entry._id, {
+    const {_id, ...entryWithoutId} = entry
+    return fetch(baseURL + _id, {
         method: 'PUT',
-        body: JSON.stringify(entry),
+        body: JSON.stringify(entryWithoutId),
         headers: {
             'Content-Type': 'application/json'
         }

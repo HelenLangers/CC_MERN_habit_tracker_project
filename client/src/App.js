@@ -78,13 +78,16 @@ function App() {
     setEntries(entries.filter(entry => entry._id !== id))
   }
 
-  const entryToUpdate = update => {
-    updateEntry(update);
+  const entryToUpdate = (update) => {
     const updatedEntryIndex = entries.findIndex(entry => entry._id === update._id)
+    console.log(updatedEntryIndex)
     const updatedEntries = [...entries];
     updatedEntries[updatedEntryIndex] = update
     setEntries(updatedEntries)
+    updateEntry(update);
   }
+
+
 
 
   return (
@@ -101,7 +104,7 @@ function App() {
         <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries}/>}/>
         <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
         <Route path='/randomiser' element={<RandomRecipe recipe={randomRecipe} setDietQuery={setDietQuery}/>}/>
-        <Route path='/update/:id' element={<UpdateEntry selectedEntry={selectedEntry} entries={entries}/>}/>
+        <Route path='/update/:id' element={<UpdateEntry selectedEntry={selectedEntry} entries={entries} entryToUpdate={entryToUpdate}/>}/>
       </Routes>
     </Router>
     <Footer/>
