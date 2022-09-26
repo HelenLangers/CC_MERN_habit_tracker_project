@@ -38,7 +38,7 @@ const SearchRecipes = ({recipes, setQuery }) => {
 
     <div className="search-results">
       {recipes.map((recipe) => (
-        <RecipeList key={recipe.recipe.label}
+        <RecipeList key={index}
         title={recipe.recipe.label}
         image={recipe.recipe.image}
         />
