@@ -20,7 +20,7 @@ function RecipeBack({recipe}) {
           <a href={recipe.recipe.url} target="_blank">See Recipe</a>
         </div>
         <div className="add-button-div">
-          <button className="submit-button" type="submit" >Cooked It</button>
+          <button className="submit-button" type="submit"><span><i class="fa-regular fa-calendar-plus fa-2xl calendar-add"></i></span></button>
         </div>
       </div>
     </div>

@@ -43,8 +43,9 @@
 
 i {
     position: relative;
-    left: -37px;
+    left: -38px;
     color: #000;
+    pointer-events: none;
 }
 
 .search-button {
