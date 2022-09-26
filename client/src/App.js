@@ -101,7 +101,7 @@ function App() {
         <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries}/>}/>
         <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
         <Route path='/randomiser' element={<RandomRecipe recipe={randomRecipe} setDietQuery={setDietQuery}/>}/>
-        <Route path='/update' element={<UpdateEntry/>}/>
+        <Route path='/update/:id' element={<UpdateEntry selectedEntry={selectedEntry} entries={entries}/>}/>
       </Routes>
     </Router>
     <Footer/>
