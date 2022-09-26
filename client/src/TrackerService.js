@@ -14,6 +14,18 @@ export const postEntry = (payload) => {
     .then(res => res.json())
 }
 
+export const updateEntry = (entry) => {
+    const {_id, ...entryWithoutId} = entry
+    return fetch(baseURL + _id, {
+        method: 'PUT',
+        body: JSON.stringify(entryWithoutId),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(res => res.json())
+}
+
 export const deleteEntry = (id) => {
     return fetch(baseURL + id, {
         method: 'DELETE'
