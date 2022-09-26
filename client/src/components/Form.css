@@ -1,21 +1,28 @@
 .form-input{
     background-color: #B6C7D6;
-    width: 100%;
+    width: 23rem;
+    height: 2rem;
+    font-size: large;
     border-radius: 25px;
-    color: blue;
-    margin: auto;
+    color: #5f37d8;
+    padding: 6px 6px;
+    margin: 5px 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
 
 }
 input[type=submit]{
     background-color: #B6C7D6;
-    width: 100%;
+    font-size: large;
+    width: 23rem;
     border-radius: 25px;
-    color: blue;
-    margin: auto;
+    color: white;
+    margin: 5px 5px;
+
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-image: linear-gradient(to left, #5f37d8, #eeeaf3);
   }
 
 #form-container{
@@ -25,6 +32,7 @@ input[type=submit]:hover {
     border-color: #B6C7D6;
     padding: 20px;
     width: 400px;
-    height: 150px;
+    height: auto;
     margin: auto;
+    justify-content: space-between;
 }

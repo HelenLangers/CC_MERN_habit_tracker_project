@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Form.css'
 
-const Form = ({ onEntrySubmit }) => {
+const Form = ({ onEntrySubmit, entries }) => {
 
   const [recipe, setRecipe] = useState("");
   const [date, setDate] = useState("");
@@ -41,26 +41,27 @@ const Form = ({ onEntrySubmit }) => {
   return (
     <>
     <form onSubmit={handleFormSubmit} id="form-container">
-      <input className="form-input"  type="text"
-      placeholder='recipe'
+      <input type="text" className="form-input" 
+      placeholder='Recipe'
       value={recipe}
       onChange={handleRecipeChange}></input>
 
-      <input className="form-input"  type="text"
-      placeholder='date'
+      <input type="text" className="form-input" 
+      placeholder='Date'
       value={date}
       onChange={handleDateChange}></input>
 
-      <input className="form-input"  type="text" 
-      placeholder='notes'
+      <input type="text" className="form-input"  
+      placeholder='Notes'
       value={notes}
       onChange={handleNotesChange}></input>
-
+      
       <input type="submit"
-      value="post"></input>
+      value="Submit"></input>
 
     </form>
     </>
     )
 }
 export default Form
+ 
