@@ -8,10 +8,11 @@ import Form from './components/Form';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import { getEntries, postEntry } from './TrackerService';
+import { deleteEntry, getEntries, postEntry, updateEntry } from './TrackerService';
 import CalendarWrapper from './components/CalendarWrapper';
 import SearchRecipes from './components/SearchRecipes';
 import RandomRecipe from './components/RandomRecipe';
+import UpdateEntry from './components/UpdateEntry';
 
 function App() {
 
@@ -52,10 +53,6 @@ function App() {
       .then(recipe => setRandomrecipe(recipe.hits[0].recipe))
   }
 
-  // const addNewEntry = (entry)=>{
-  //   addEntry(entry)
-  //   .then(savedEntry => setEntries([...entries, savedEntry]))
-  // }
 
   const addNewEntry = (entry)=>{
     postEntry(entry)
@@ -66,7 +63,26 @@ function App() {
     setSelectedEntryId(id)
   }
   
+  
+
   const selectedEntry = entries.find(entry => entry._id === selectedEntryId)
+
+  const handleDelete = (id) =>{
+    deleteEntry(id)
+    setEntries(entries.filter(entry => entry._id !== id))
+  }
+
+  const entryToUpdate = (update) => {
+    const updatedEntryIndex = entries.findIndex(entry => entry._id === update._id)
+    console.log(updatedEntryIndex)
+    const updatedEntries = [...entries];
+    updatedEntries[updatedEntryIndex] = update
+    setEntries(updatedEntries)
+    updateEntry(update);
+  }
+
+
+
 
   return (
     <div>
@@ -75,12 +91,17 @@ function App() {
     <Header/>
       <NavBar/>
       <Routes>
-        <Route path='/' element={<Dashboard entries={entries} recipes={recipes}/>}/>
-        <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry}/>}/>
+
+        <Route path='/' element={<Dashboard entries={entries}recipe={randomRecipe}/>}/>
         <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
-        <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries}/>}/>
         <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
         <Route path='/randomiser' element={<RandomRecipe recipe={randomRecipe}/>}/>
+        <Route path='/entries' element = 
+        {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry} handleDelete={handleDelete} entryToUpdate={entryToUpdate}/> }/>
+ 
+        <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries}/>}/>
+        <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
+        <Route path='/update/:id' element={<UpdateEntry selectedEntry={selectedEntry} entries={entries} entryToUpdate={entryToUpdate}/>}/>
       </Routes>
     </Router>
     <Footer/>
