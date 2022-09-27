@@ -72,6 +72,15 @@ function App() {
     setEntries(entries.filter(entry => entry._id !== id))
   }
 
+  /* const handleDelete = (id) =>{
+    deleteEntry(id).then(()=>{
+      let temp = entries.map(e=>e)
+      const toDelete = entries.map(e=>e._id).indexOf(id)
+      temp.splice(toDelete, 1);
+      setEntries(temp)
+    })
+  } */
+
   const entryToUpdate = (update) => {
     const updatedEntryIndex = entries.findIndex(entry => entry._id === update._id)
     console.log(updatedEntryIndex)

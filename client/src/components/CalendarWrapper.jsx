@@ -17,8 +17,8 @@ const CalendarWrapper = ({ entries, handleDelete }) => {
 
   const entriesToDisplay = entries.filter(entry => (new Date(entry.date)).toDateString() === selectedDate.toDateString())
 
-  const entryCards = entriesToDisplay.map((entryToDisplay) => {
-    return<li><ShowEntry selectedEntry={entryToDisplay} handleDelete={handleDelete}/></li>
+  const entryCards = entriesToDisplay.map((selectedEntry) => {
+    return<li><ShowEntry selectedEntry={selectedEntry} handleDelete={handleDelete}/></li>
 
   })
 
