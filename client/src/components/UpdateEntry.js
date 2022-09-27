@@ -41,7 +41,7 @@ const UpdateEntry = ({entries, entryToUpdate}) => {
     });
 
 
-
+    // blahhh
     // console.log(recipeToSubmit, dateToSubmit, notes)
   }
 
