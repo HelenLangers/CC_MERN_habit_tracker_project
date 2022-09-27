@@ -3,7 +3,7 @@ import './RecipeList.css';
 import RecipeFront from './RecipeFront';
 import RecipeBack from './RecipeBack';
 
-const RecipeListItems = ({ recipe, selectARecipe }) => {
+const RecipeListItems = ({ recipe}) => {
   
   const [flip, setFlip] = useState(false)
 
@@ -13,7 +13,7 @@ const RecipeListItems = ({ recipe, selectARecipe }) => {
         <RecipeFront recipe={recipe}/>
       </div>
       <div className="back">
-        <RecipeBack recipe={recipe} selectARecipe={selectARecipe}/>
+        <RecipeBack recipe={recipe}/>
       </div>
     </div>
   )

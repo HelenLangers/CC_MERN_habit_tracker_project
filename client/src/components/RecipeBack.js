@@ -6,17 +6,17 @@ function RecipeBack({ recipe }) {
 
   const [recipeToAddToForm, setRecipeToAddToForm] = useState({recipe})
 
-  const ingredientsList = recipe.recipe.ingredientLines.map((ingredient, index) => {
-    return (
-      <li>{ingredient}</li>)
-    })
+  // const ingredientsList = recipe.recipe.ingredientLines.map((ingredient, index) => {
+  //   return (
+  //     <li>{ingredient}</li>)
+  //   })
 
   return (
     <div className="back-container">
-      <div className="ingredients">
+      {/* <div className="ingredients">
       <h3>Ingredients:</h3>
       {ingredientsList}
-      </div>
+      </div> */}
       <div className="buttons-container">
         <div className="button-box">
           <a href={recipe.recipe.url} target="_blank">See Recipe</a>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ShowOneRecipe from "./ShowOneRecipe";
+import RecipeListItems from "./RecipeListItems";
 
 const RandomRecipe = (recipe) => {
   if (!recipe) return <h2>Loading...</h2>;
@@ -8,7 +9,7 @@ const RandomRecipe = (recipe) => {
     <div>
       <h2>Stuck for ideas?</h2>
 
-      <ShowOneRecipe recipe={recipe.recipe} />
+        <RecipeListItems recipe={recipe} />
     </div>
   );
 };

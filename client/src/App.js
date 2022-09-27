@@ -20,9 +20,8 @@ function App() {
   const [selectedEntryId, setSelectedEntryId] =  useState('')
 
   const [recipes, setRecipes] = useState([])
-  const [query, setQuery] = useState('salad')
+  const [query, setQuery] = useState('')
   const [randomRecipe, setRandomrecipe] = useState([])
-  const [chosenRecipe, setChosenRecipe] = useState([])
 
   useEffect (()=>{
     getEntries()
@@ -52,10 +51,6 @@ function App() {
       fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + query + '&app_id=' + appId + '&app_key=' + myKey + '&diet=balanced&random=true')
       .then(res => res.json())
       .then(recipe => setRandomrecipe(recipe.hits[0].recipe))
-  }
-
-  const selectARecipe = (recipe) => {
-    setChosenRecipe(recipe)
   }
 
   const addNewEntry = (entry)=>{
@@ -101,8 +96,8 @@ function App() {
         <Route path='/entries' element = 
         {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry} handleDelete={handleDelete} entryToUpdate={entryToUpdate}/> }/>
  
-        <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries} chosenRecipe={chosenRecipe} recipes={recipes}/>}/>
-        <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery} selectARecipe={selectARecipe}/>}/>
+        <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries} />}/>
+        <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery} />}/>
         <Route path='/update/:id' element={<UpdateEntry selectedEntry={selectedEntry} entries={entries} entryToUpdate={entryToUpdate}/>}/>
       </Routes>
     </Router>

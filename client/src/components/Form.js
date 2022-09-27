@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {useLocation} from "react-router-dom";
 import './Form.css'
 
-const Form = ({ onEntrySubmit, recipes }) => {
+const Form = ({ onEntrySubmit }) => {
 
   const location = useLocation();
   const state = location.state;
@@ -47,7 +47,7 @@ const Form = ({ onEntrySubmit, recipes }) => {
     <form onSubmit={handleFormSubmit} id="form-container">
       <input type="text" className="form-input" 
       placeholder='Recipe'
-      value={recipe|| state.recipe.recipe.label}
+      value={recipe || state.recipe.recipe.label}
       onChange={handleRecipeChange}></input>
 
       <input type="text" className="form-input" 
