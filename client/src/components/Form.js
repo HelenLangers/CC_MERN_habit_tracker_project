@@ -6,7 +6,6 @@ const Form = ({ onEntrySubmit, recipes }) => {
 
   const location = useLocation();
   const state = location.state;
-  console.log(state.recipe.recipe.label);
 
   const [recipe, setRecipe] = useState("");
   const [date, setDate] = useState("");
@@ -48,7 +47,7 @@ const Form = ({ onEntrySubmit, recipes }) => {
     <form onSubmit={handleFormSubmit} id="form-container">
       <input type="text" className="form-input" 
       placeholder='Recipe'
-      value={recipe}
+      value={recipe|| state.recipe.recipe.label}
       onChange={handleRecipeChange}></input>
 
       <input type="text" className="form-input" 
