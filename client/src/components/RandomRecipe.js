@@ -1,15 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import RecipeListItems from "./RecipeListItems";
 // import ShowOneRecipe from "./ShowOneRecipe";
 
-const RandomRecipe = ({recipe}) => {
-  if (!recipe) return <h2>Loading...</h2>;
+const RandomRecipe = ({recipe, getRandomRecipe}) => {
+
+  const [hasRecipe, setHasRecipe] = useState(false);
+
+  const handleClick = () => {
+    getRandomRecipe()
+    setHasRecipe(true)
+  }
+
+  console.log(recipe)
 
   return (
     <div>
       <h2>Stuck for ideas?</h2>
-      {/* <RecipeListItems recipe={recipe} /> */}
-        {/* <ShowOneRecipe recipe={recipe} /> */}
+      <button onClick={handleClick}>Inspire Me!</button>
+      { hasRecipe ? <RecipeListItems recipe={recipe}/> : <p>Put something here as a placeholder that gets replaced by a recipe when you hit the button</p>}
+    
     </div>
   );
 };
