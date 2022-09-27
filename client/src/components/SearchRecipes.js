@@ -39,8 +39,7 @@ const SearchRecipes = ({recipes, setQuery }) => {
     <div className="search-results">
       {recipes.map((recipe, index) => (
         <RecipeListItems key={index}
-        recipe={recipe}
-        />
+        recipe={recipe} />
       ))}
       </div>
     </div>
