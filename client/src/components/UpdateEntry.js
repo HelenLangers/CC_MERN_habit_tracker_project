@@ -5,8 +5,8 @@ import { useState } from 'react'
 const UpdateEntry = ({entries, entryToUpdate}) => {
 
   const [recipeEdit, setRecipeEdit] = useState("");
-  const [dateEdit, setDateEdit] = useState("");
-  const [notesEdit, setNotesEdit] = useState("");
+  const [dateEdit, setDateEdit] = useState("entryToUpdate.date");
+  const [notesEdit, setNotesEdit] = useState("entryToUpdate.notes");
 
   const {id} = useParams()
 
@@ -49,11 +49,11 @@ const UpdateEntry = ({entries, entryToUpdate}) => {
     <>
     <h3>Update this thing!</h3>
     <form id="form-container" onSubmit={handleFormEdit}>
-      <input type="text" className="form-input" placeholder={selectedEntryForEdit.recipeName} onChange={handleRecipeEdit}></input>
+      <input type="text" className="form-input" defaultValue={selectedEntryForEdit.recipeName} placeholder={selectedEntryForEdit.recipeName} onChange={handleRecipeEdit}></input>
 
-      <input type="text" className="form-input" placeholder={selectedEntryForEdit.date} onChange={handleDateEdit}></input>
+      <input type="text" className="form-input" defaultValue={selectedEntryForEdit.date} placeholder={selectedEntryForEdit.date} onChange={handleDateEdit}></input>
 
-      <input type="text" className="form-input" placeholder={selectedEntryForEdit.notes} onChange={handleNotesEdit}></input>
+      <input type="text" className="form-input" defaultValue={selectedEntryForEdit.notes} placeholder={selectedEntryForEdit.notes} onChange={handleNotesEdit}></input>
       
       <input type="submit"
       value="Submit"></input>
