@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ShowOneRecipe from "./ShowOneRecipe";
 import RecipeListItems from "./RecipeListItems";
 
 const RandomRecipe = (recipe) => {
@@ -8,7 +7,6 @@ const RandomRecipe = (recipe) => {
   return (
     <div>
       <h2>Stuck for ideas?</h2>
-
         <RecipeListItems recipe={recipe} />
     </div>
   );
