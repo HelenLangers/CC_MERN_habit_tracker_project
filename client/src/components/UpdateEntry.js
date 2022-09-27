@@ -1,20 +1,21 @@
 import React from 'react'
-import { useParams} from 'react-router-dom'
+import { useParams, useNavigate} from 'react-router-dom'
 import { useState } from 'react'
 
 const UpdateEntry = ({entries, entryToUpdate}) => {
 
+  const navigate = useNavigate()
+
   const [recipeEdit, setRecipeEdit] = useState("");
-  const [dateEdit, setDateEdit] = useState("entryToUpdate.date");
-  const [notesEdit, setNotesEdit] = useState("entryToUpdate.notes");
+  const [dateEdit, setDateEdit] = useState("");
+  const [notesEdit, setNotesEdit] = useState("");
 
   const {id} = useParams()
 
   if(!entries.length) return null
 
   const selectedEntryForEdit = entries.find(entry => entry._id === id)
-  
-  
+
   const handleRecipeEdit = (e) => {
     setRecipeEdit(e.target.value);
   }
@@ -33,12 +34,17 @@ const UpdateEntry = ({entries, entryToUpdate}) => {
     const dateToSubmit = dateEdit;
     const notesToSubmit = notesEdit
     
+    
     entryToUpdate({
-      recipeName: recipeToSubmit,
-      date: dateToSubmit,
-      notes: notesToSubmit,
+      recipeName: (recipeToSubmit ? recipeToSubmit : selectedEntryForEdit.recipeName),
+      date: (dateToSubmit ? dateToSubmit : selectedEntryForEdit.date),
+      notes: (notesToSubmit ? notesToSubmit : selectedEntryForEdit.notes),
       _id: id
     });
+
+    navigate('/entries');
+
+    
 
 
     // blahhh
