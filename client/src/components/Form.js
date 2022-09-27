@@ -46,7 +46,7 @@ const Form = ({ onEntrySubmit, entries }) => {
       value={recipe}
       onChange={handleRecipeChange}></input>
 
-      <input type="text" className="form-input" 
+      <input type="date" className="form-input" 
       placeholder='Date'
       value={date}
       onChange={handleDateChange}></input>
