@@ -1,8 +1,8 @@
-.chartDayWithEntryStyling {
-    background-color: green;
+.react-calendar__tile.chart > abbr:not(:only-child) {
+    display: none;
 }
 
-.chart-container {
-    margin: 32px;
-    
+.react-calendar__tile.chart{
+    background-color: white !important;
+    cursor: default !important;
 }
