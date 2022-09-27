@@ -22,6 +22,7 @@ function App() {
   const [recipes, setRecipes] = useState([])
   const [query, setQuery] = useState('salad')
   const [randomRecipe, setRandomrecipe] = useState([])
+  const [chosenRecipe, setChosenRecipe] = useState([])
 
   useEffect (()=>{
     getEntries()
@@ -53,6 +54,9 @@ function App() {
       .then(recipe => setRandomrecipe(recipe.hits[0].recipe))
   }
 
+  const selectARecipe = (recipe) => {
+    setChosenRecipe(recipe)
+  }
 
   const addNewEntry = (entry)=>{
     postEntry(entry)
@@ -63,8 +67,6 @@ function App() {
     setSelectedEntryId(id)
   }
   
-  
-
   const selectedEntry = entries.find(entry => entry._id === selectedEntryId)
 
   const handleDelete = (id) =>{
@@ -99,8 +101,8 @@ function App() {
         <Route path='/entries' element = 
         {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry} handleDelete={handleDelete} entryToUpdate={entryToUpdate}/> }/>
  
-        <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries}/>}/>
-        <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
+        <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries} chosenRecipe={chosenRecipe} recipes={recipes}/>}/>
+        <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery} selectARecipe={selectARecipe}/>}/>
         <Route path='/update/:id' element={<UpdateEntry selectedEntry={selectedEntry} entries={entries} entryToUpdate={entryToUpdate}/>}/>
       </Routes>
     </Router>

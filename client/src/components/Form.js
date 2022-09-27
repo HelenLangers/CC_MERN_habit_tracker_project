@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
+import {useLocation} from "react-router-dom";
 import './Form.css'
 
-const Form = ({ onEntrySubmit, entries }) => {
+const Form = ({ onEntrySubmit, recipes }) => {
+
+  const location = useLocation();
+  const state = location.state;
+  console.log(state.recipe.recipe.label);
 
   const [recipe, setRecipe] = useState("");
   const [date, setDate] = useState("");
