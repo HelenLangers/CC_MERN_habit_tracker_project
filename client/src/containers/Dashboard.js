@@ -10,7 +10,7 @@ const Dashboard = ({entries, recipe}) => {
 
 
   return (
-    <div>
+    <div className='dashboard-container'>
       <Counter entries={entries}/>
       <Chart entries={entries}/>
       <RandomRecipe recipe={recipe}/>

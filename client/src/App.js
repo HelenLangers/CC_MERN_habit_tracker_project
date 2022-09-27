@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import config from './config.js';
 import Form from './components/Form';
+import "./App.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from 'react';
@@ -94,7 +95,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className='app-container'>
 
     <Router>
     <Header/>

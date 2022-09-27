@@ -1,13 +1,10 @@
 
 .selectedEntry {
-    border-radius: 25px;
-    border: 2px solid;
-    border-color: #B6C7D6;
-    padding: 20px;
-    width: 400px;
-    height: 150px;
-    background-color: rgb(167, 236, 213);
-    margin: auto;
+    border-radius: 48px;
+    background-color: rgb(168, 199, 153);
+    margin: 1rem;
+    padding: 1.25rem;
+    min-width: fit-content;
 }
 
 

@@ -15,7 +15,7 @@ const ShowOneRecipe = ({ recipe }) => {
         </div>
       </div>
 
-      <div className="back">
+      <div className="back shadow">
         <div className="back-container">
           <div className="ingredients">
             <h3>Ingredients:</h3>

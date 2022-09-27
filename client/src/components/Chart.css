@@ -3,6 +3,6 @@
 }
 
 .react-calendar__tile.chart{
-    background-color: white !important;
+    background-color: rgb(149, 171, 110) !important;
     cursor: default !important;
 }

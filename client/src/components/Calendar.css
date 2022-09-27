@@ -1,3 +1,27 @@
+@font-face {
+    font-family: 'euclid';
+    src: url("../../public/euclid-font.ttf");
+  }
+  
+
 .dayWithEntryStyling {
-    background-color: green;
+    background-color: rgb(102, 172, 102);
+    border-radius: 64px;
+    
+}
+
+.react-calendar {
+    font-family: 'euclid';
+    background-color: rgb(149, 171, 110);
+    border-radius: 32px;
+    overflow: hidden;
+    padding: 2em;
+    margin: 1em;
+    color: antiquewhite;
+    border: none;
+    box-shadow: 0 0 5px 2px rgba(162, 151, 151, 0.3);
+}
+
+.react-calendar__navigation__label__labelText {
+    font-family: 'euclid';
 }
