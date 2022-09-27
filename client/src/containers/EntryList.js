@@ -16,9 +16,9 @@ import CalendarWrapper from '../components/CalendarWrapper'
 const EntryList = ({entries, onEntrySelect, selectedEntry, handleDelete}) => {
   return (
     <>
-    <CalendarWrapper entries={entries} onEntrySelect={onEntrySelect}/>
-    <EntrySelector entries={entries} onEntrySelect={onEntrySelect}/>
-    <ShowEntry selectedEntry={selectedEntry} handleDelete={handleDelete}/>
+    <CalendarWrapper entries={entries} onEntrySelect={onEntrySelect} handleDelete={handleDelete}/>
+    {/* <EntrySelector entries={entries} onEntrySelect={onEntrySelect}/>
+    <ShowEntry selectedEntry={selectedEntry} handleDelete={handleDelete}/> */}
     </>
   )
 }

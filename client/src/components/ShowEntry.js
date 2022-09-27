@@ -20,7 +20,7 @@ const ShowEntry = ({selectedEntry, handleDelete}) => {
       <h3>{selectedEntry.recipeName}</h3>
       <p>{selectedEntry.date}</p>
       <p>Notes: {selectedEntry.notes}</p>
-      <button onClick={deletedEntry}>Delete</button>
+      <button onClick={()=>deletedEntry(selectedEntry._id)}>Delete</button>
       <button><a href={`/update/${selectedEntry._id}`}>Edit</a></button>
     </div>
   )
