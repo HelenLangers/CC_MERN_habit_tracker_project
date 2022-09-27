@@ -4,7 +4,7 @@ import RecipeFront from './RecipeFront';
 import RecipeBack from './RecipeBack';
 
 const RecipeListItems = ({ recipe }) => {
-  
+
   const [flip, setFlip] = useState(false)
 
   return (

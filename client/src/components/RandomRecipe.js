@@ -11,7 +11,6 @@ const RandomRecipe = ({recipe, getRandomRecipe}) => {
     setHasRecipe(true)
   }
 
-  console.log(recipe)
 
   return (
     <div>
