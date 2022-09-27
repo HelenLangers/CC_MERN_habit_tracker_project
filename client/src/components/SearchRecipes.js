@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import RecipeListItems from './RecipeListItems';
 import './SearchRecipes.css';
 
-const SearchRecipes = ({recipes, setQuery, selectARecipe }) => {
+const SearchRecipes = ({recipes, setQuery }) => {
 
   const [search, setSearch] = useState('')
 
@@ -39,8 +39,7 @@ const SearchRecipes = ({recipes, setQuery, selectARecipe }) => {
     <div className="search-results">
       {recipes.map((recipe, index) => (
         <RecipeListItems key={index}
-        recipe={recipe} selectARecipe={selectARecipe}
-        />
+        recipe={recipe} />
       ))}
       </div>
     </div>

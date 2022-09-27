@@ -1,9 +1,9 @@
-import React, {useState, useRef, useEffect } from 'react';
+import React, {useState } from 'react';
 import './RecipeList.css';
 import RecipeFront from './RecipeFront';
 import RecipeBack from './RecipeBack';
 
-const RecipeListItems = ({ recipe}) => {
+const RecipeListItems = ({ recipe }) => {
   
   const [flip, setFlip] = useState(false)
 

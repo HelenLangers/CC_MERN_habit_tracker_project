@@ -21,7 +21,7 @@ function App() {
 
   const [recipes, setRecipes] = useState([])
   const [query, setQuery] = useState('')
-  const [randomRecipe, setRandomrecipe] = useState([])
+  const [randomRecipe, setRandomRecipe] = useState([])
 
   useEffect (()=>{
     getEntries()
@@ -50,7 +50,7 @@ function App() {
   const getRandomRecipe = function(){
       fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + query + '&app_id=' + appId + '&app_key=' + myKey + '&diet=balanced&random=true')
       .then(res => res.json())
-      .then(recipe => setRandomrecipe(recipe.hits[0].recipe))
+      .then(recipes => setRandomRecipe(recipes.hits[0]))
   }
 
   const addNewEntry = (entry)=>{
@@ -79,8 +79,6 @@ function App() {
   }
 
 
-
-
   return (
     <div>
 
@@ -89,13 +87,10 @@ function App() {
       <NavBar/>
       <Routes>
 
-        <Route path='/' element={<Dashboard entries={entries}recipe={randomRecipe} />}/>
+        <Route path='/' element={<Dashboard entries={entries} recipe={randomRecipe} />}/>
         <Route path='/calendar' element = {<CalendarWrapper entries={entries} handleDelete={handleDelete}/>}/>
         <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
-        <Route path='/randomiser' element={<RandomRecipe recipe={randomRecipe}/>}/>
-        <Route path='/entries' element = 
-        {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry} handleDelete={handleDelete} entryToUpdate={entryToUpdate}/> }/>
- 
+        <Route path='/entries' element = {<EntryList entries={entries} onEntrySelect={onEntrySelect} selectedEntry = {selectedEntry} handleDelete={handleDelete} entryToUpdate={entryToUpdate}/> }/>
         <Route path='/form' element={<Form onEntrySubmit={(entry) => addNewEntry(entry)} entries={entries} />}/>
         <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery} />}/>
         <Route path='/update/:id' element={<UpdateEntry selectedEntry={selectedEntry} entries={entries} entryToUpdate={entryToUpdate}/>}/>
