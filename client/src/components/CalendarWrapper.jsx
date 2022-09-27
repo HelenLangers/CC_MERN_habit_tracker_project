@@ -4,7 +4,7 @@ import ShowEntry from "./ShowEntry";
 
 //Calendar renders out an interactive calendar highlighting days with entries.
 
-const CalendarWrapper = ({ entries }) => {
+const CalendarWrapper = ({ entries, handleDelete }) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
 
@@ -18,7 +18,7 @@ const CalendarWrapper = ({ entries }) => {
   const entriesToDisplay = entries.filter(entry => (new Date(entry.date)).toDateString() === selectedDate.toDateString())
 
   const entryCards = entriesToDisplay.map((entryToDisplay) => {
-    return<li><ShowEntry selectedEntry={entryToDisplay}/></li>
+    return<li><ShowEntry selectedEntry={entryToDisplay} handleDelete={handleDelete}/></li>
 
   })
 

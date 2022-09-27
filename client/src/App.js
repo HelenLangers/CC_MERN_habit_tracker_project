@@ -92,8 +92,8 @@ function App() {
       <NavBar/>
       <Routes>
 
-        <Route path='/' element={<Dashboard entries={entries}recipe={randomRecipe}/>}/>
-        <Route path='/calendar' element = {<CalendarWrapper entries={entries}/>}/>
+        <Route path='/' element={<Dashboard entries={entries}recipe={randomRecipe} />}/>
+        <Route path='/calendar' element = {<CalendarWrapper entries={entries} handleDelete={handleDelete}/>}/>
         <Route path='/searchrecipes' element ={<SearchRecipes recipes={recipes} setQuery={setQuery}/>}/>
         <Route path='/randomiser' element={<RandomRecipe recipe={randomRecipe}/>}/>
         <Route path='/entries' element = 
