@@ -21,7 +21,8 @@ const SearchRecipes = ({recipes, setQuery }) => {
 
   return (
     <div className="search-page">
-    <div className="wrapper">
+    <div className="form-wrapper">
+    <h2 className="form-header">Step 1: Select Your Recipe</h2>
       <form onSubmit={submitSearch} className="search-form">
         <input className="search-bar" 
         type="text" 

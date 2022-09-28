@@ -8,13 +8,13 @@ function RecipeBack({ recipe }) {
 
   const ingredientsList = recipe.recipe.ingredientLines.map((ingredient, index) => {
     return (
-      <li>{ingredient}</li>)
+      <li className="ingredients-list">{ingredient}</li>)
     })
 
   return (
     <div className="back-container">
       <div className="ingredients">
-      <h3>Ingredients:</h3>
+      <h3 className="ingredients-header">Ingredients:</h3>
       {ingredientsList}
       </div>
       <div className="buttons-container">
@@ -22,8 +22,8 @@ function RecipeBack({ recipe }) {
           <a href={recipe.recipe.url} target="_blank">See Recipe</a>
         </div>
         <div className="add-button-div">
-        <Link to="/form" state={recipeToAddToForm}>
-            <span><i className="fa-regular fa-calendar-plus fa-2xl calendar-add"></i></span></Link>
+        <Link to="/form" state={recipeToAddToForm} className="add-entry-button">
+            Add Entry</Link>
         </div>
       </div>
     </div>
