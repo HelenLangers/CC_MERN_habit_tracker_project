@@ -1,3 +1,57 @@
-.dayWithEntryStyling {
-    background-color: green;
+@font-face {
+    font-family: 'euclid';
+    src: url("../../public/euclid-font.ttf");
+  }
+  
+  .dayWithEntryStyling {
+    background-color: #C4D0A8;
+    border-radius: 32px;
+    
+}
+
+.react-calendar__navigation__label {
+    font-family: 'euclid';
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    font-family: 'euclid';
+    text-decoration: none;
+    text-decoration-line: none;
+    border-radius: 32px;
+}
+
+abbr[title] {
+    text-decoration: none;
+    
+}
+
+abbr aria-label {
+    color: black;
+}
+
+
+.react-calendar__month-view__days__day--weekend {
+    font-family: 'euclid'; 
+    color: black;
+}
+
+
+button {
+    font-family: 'euclid';
+}
+
+/* 
+
+commented out because it's messing with chart
+
+button:hover {
+    --translate-y: -2px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+} */
+
+.react-calendar {
+    border-radius: 32px;
+    padding: 1em;
+    border: none;
+    box-shadow: 0 0 2px 1px  rgba(176, 168, 168, 0.5);
 }

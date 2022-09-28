@@ -25,16 +25,20 @@ const CalendarWrapper = ({ entries, handleDelete }) => {
 
 
   return (
-<>
-    <Calendar
+<div className="new-entry-container">
+    <div className="calendar"><Calendar
       onDateChanged={onDateChanged}
       datesWithEntries={datesWithEntries}
     />
-    
+
+    </div>
+<div className="entry-cards">
+    <ul>
       {entryCards}
-  
-    
-    </>
+    </ul>
+    </div>
+    </div>
+
   );
 };
 
