@@ -27,9 +27,10 @@ header h1 {
 }
 
 .bar {
-    height: 3px;
+    height: 20px;
     width: 100%;
-    background-color: black; 
+    left: 2px;
+    padding-top: 15px;
 }
 
 @media (max-width: 800px) {

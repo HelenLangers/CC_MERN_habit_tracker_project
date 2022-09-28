@@ -38,10 +38,11 @@ const Header = () => {
     {menu}
     <header>
       <a href='#' className="toggle-button" onClick={() => setShowMenu(!showMenu)} >
+          {/* <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <span className="bar"></span> */}
+          <i className="fa-solid fa-burger fa-2xl bar"></i>
       </a>
       <h1>Holy Shiitake!</h1>
       <p className='header'>a mindful eating app...</p>
