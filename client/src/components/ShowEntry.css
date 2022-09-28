@@ -1,14 +1,29 @@
 
-.selectedEntry {
-    border-radius: 25px;
-    border: 2px solid;
-    border-color: #B6C7D6;
-    padding: 20px;
-    width: 400px;
-    height: 150px;
-    background-color: rgb(167, 236, 213);
-    margin: auto;
+
+.editButtons {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.entryDate {
+    text-align: right;
+    font-size: 15px;
 }
 
 
+.selectedEntry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 48px;
+    box-shadow: 0 0 2px 1px  rgba(93, 89, 89, 0.5);
+    width: 400px;
+    height: auto;
+    background-color: #c4d0a8;
+    padding: 1.5rem;
+    margin: auto;}
 
+.selectedEntry h3 {
+    text-align: center;
+}

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Calendar from "./Calendar";
 import ShowEntry from "./ShowEntry";
+import "./CalendarWrapper.css"
 
 //Calendar renders out an interactive calendar highlighting days with entries.
 
@@ -18,7 +19,7 @@ const CalendarWrapper = ({ entries, handleDelete }) => {
   const entriesToDisplay = entries.filter(entry => (new Date(entry.date)).toDateString() === selectedDate.toDateString())
 
   const entryCards = entriesToDisplay.map((selectedEntry) => {
-    return<li><ShowEntry selectedEntry={selectedEntry} handleDelete={handleDelete}/></li>
+    return<li className="showEntryList"><ShowEntry selectedEntry={selectedEntry} handleDelete={handleDelete}/></li>
 
   })
 
@@ -29,9 +30,9 @@ const CalendarWrapper = ({ entries, handleDelete }) => {
       onDateChanged={onDateChanged}
       datesWithEntries={datesWithEntries}
     />
-    <ul>
+    
       {entryCards}
-    </ul>
+  
     
     </>
   );
