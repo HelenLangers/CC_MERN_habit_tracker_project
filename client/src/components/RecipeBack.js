@@ -14,7 +14,7 @@ function RecipeBack({ recipe }) {
   return (
     <div className="back-container">
       <div className="ingredients">
-      <h3>Ingredients:</h3>
+      <h3 className="ingredients-header">Ingredients:</h3>
       {ingredientsList}
       </div>
       <div className="buttons-container">

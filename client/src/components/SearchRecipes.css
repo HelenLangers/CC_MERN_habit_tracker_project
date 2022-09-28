@@ -90,7 +90,8 @@ i {
 }
 
 @media (max-width: 800px) {
-    .wrapper {
+    .form-wrapper {
         width: 90vw;
+        text-align: center;
     }
 }
