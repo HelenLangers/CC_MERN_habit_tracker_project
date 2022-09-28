@@ -1,5 +1,7 @@
 .dashboard {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
     margin: 1em;
     align-items: center;
