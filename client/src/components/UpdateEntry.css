@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'euclid';
+    src: url("../../public/euclid-font.ttf");
+  }
+
+h1{
+    font-family: 'euclid';
+    color:#426043;
+    text-align: center;
+}
