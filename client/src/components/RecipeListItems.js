@@ -1,5 +1,5 @@
 import React, {useState } from 'react';
-import './RecipeList.css';
+import './RecipeCard.css';
 import RecipeFront from './RecipeFront';
 import RecipeBack from './RecipeBack';
 

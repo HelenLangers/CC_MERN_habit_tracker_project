@@ -1,3 +1,4 @@
+
 .new-entry-container {
     display: flex;
     margin: 32px;
@@ -6,4 +7,9 @@
 
 .calendar {
     margin: 1em;
+}
+.showEntryList {
+    list-style-type: none;
+    margin: 2rem;
+
 }

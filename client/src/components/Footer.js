@@ -3,6 +3,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
+
     <>
     <div className='footer-container'>
   <div class="custom-shape-divider-bottom-1664370261">
@@ -14,6 +15,7 @@ const Footer = () => {
     <footer className='FooterBar'>©Team Habit Trakkkker 2022</footer>
     
     </>
+
   )
 }
 

@@ -19,7 +19,7 @@ const CalendarWrapper = ({ entries, handleDelete }) => {
   const entriesToDisplay = entries.filter(entry => (new Date(entry.date)).toDateString() === selectedDate.toDateString())
 
   const entryCards = entriesToDisplay.map((selectedEntry) => {
-    return<li><ShowEntry selectedEntry={selectedEntry} handleDelete={handleDelete}/></li>
+    return<li className="showEntryList"><ShowEntry selectedEntry={selectedEntry} handleDelete={handleDelete}/></li>
 
   })
 
@@ -30,6 +30,7 @@ const CalendarWrapper = ({ entries, handleDelete }) => {
       onDateChanged={onDateChanged}
       datesWithEntries={datesWithEntries}
     />
+
     </div>
 <div className="entry-cards">
     <ul>
@@ -37,6 +38,7 @@ const CalendarWrapper = ({ entries, handleDelete }) => {
     </ul>
     </div>
     </div>
+
   );
 };
 

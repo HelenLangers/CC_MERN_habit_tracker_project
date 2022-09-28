@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams, useNavigate} from 'react-router-dom'
 import { useState } from 'react'
+import './UpdateEntry.css'
 
 const UpdateEntry = ({entries, entryToUpdate}) => {
 
@@ -53,9 +54,9 @@ const UpdateEntry = ({entries, entryToUpdate}) => {
 
   return (
     <>
-    <h3>Update this thing!</h3>
+    <h1>Update an entry:</h1>
     <form id="form-container" onSubmit={handleFormEdit}>
-      <input type="text" className="form-input" defaultValue={selectedEntryForEdit.recipeName} placeholder={selectedEntryForEdit.recipeName} onChange={handleRecipeEdit}></input>
+      <input type="text" className="form-input" defaultValue={selectedEntryForEdit.recipeName} placeholder={selectedEntryForEdit.recipeName} onChange={handleRecipeEdit} contentEditable></input>
 
       <input type="date" className="form-input" defaultValue={selectedEntryForEdit.date} placeholder={selectedEntryForEdit.date} onChange={handleDateEdit}></input>
 
