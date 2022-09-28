@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Calendar from "./Calendar";
 import ShowEntry from "./ShowEntry";
+import "./CalendarWrapper.css"
 
 //Calendar renders out an interactive calendar highlighting days with entries.
 
@@ -24,16 +25,18 @@ const CalendarWrapper = ({ entries, handleDelete }) => {
 
 
   return (
-<>
-    <Calendar
+<div className="new-entry-container">
+    <div className="calendar"><Calendar
       onDateChanged={onDateChanged}
       datesWithEntries={datesWithEntries}
     />
+    </div>
+<div className="entry-cards">
     <ul>
       {entryCards}
     </ul>
-    
-    </>
+    </div>
+    </div>
   );
 };
 

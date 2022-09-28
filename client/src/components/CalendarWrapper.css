@@ -1,0 +1,9 @@
+.new-entry-container {
+    display: flex;
+    margin: 32px;
+    justify-content: center;
+}
+
+.calendar {
+    margin: 1em;
+}
