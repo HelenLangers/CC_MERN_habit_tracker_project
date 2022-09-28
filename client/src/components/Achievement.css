@@ -1,8 +1,8 @@
 .achievementBox {
-    background-color: #C4D0A8;
+    background-color: var(--primary);
     border-radius: 48px;
-    margin: 2rem;
     padding: 1.5rem;
     color: white;
     text-align: center;
+    min-width: 350px;
 }

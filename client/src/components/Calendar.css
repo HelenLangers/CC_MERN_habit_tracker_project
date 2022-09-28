@@ -1,10 +1,6 @@
-@font-face {
-    font-family: 'euclid';
-    src: url("../../public/euclid-font.ttf");
-  }
-  
+
   .dayWithEntryStyling {
-    background-color: #C4D0A8;
+    background-color: var(--primary);
     border-radius: 32px;
     
 }

@@ -5,7 +5,6 @@
     font-size:20px;  
     width: 100%;
     text-align: center;
-    color: #fbf2ed ;
 }
 
 .nav_links {  
@@ -24,6 +23,7 @@
 }
 
 .navlist :hover {
+    color: #fbf2ed ;
     background-color: #779a78;
 }
 
@@ -32,7 +32,7 @@
         display: none;
     }
     .NavBar {
-        background: none;
+        display: none;
     }
 }
 

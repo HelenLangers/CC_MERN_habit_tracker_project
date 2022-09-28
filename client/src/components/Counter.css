@@ -1,11 +1,10 @@
 .counter-container {
-    background-color: #C4D0A8;
+    background-color: var(--primary);
     border-radius: 48px;
-    margin: 2rem;
-    padding: 1.5rem;
+    padding-top: 8px;
     color: white;
     text-align: center;
-
+    min-width: 350px;
 }
 
 .number-of-meals {

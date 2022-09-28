@@ -2,15 +2,42 @@
   font-family: 'euclid';
   src: url("../public/euclid-font.ttf");
 }
+
+@font-face {
+  font-family: 'milk';
+  src: url("../public/MilkyCoffee.ttf");
+}
+
+/* Colours: #C4D0A8 - pale green
+        #EBDED7 - white-ish
+        #426043 - dark green
+        #2A1915   - dark brown
+        #D1792C - orange
+        
+        */
+
+:root {
+  --primary: #b2bd98;
+  --primary-dark: #426043;
+  --neutral-dark: #251f1d;
+  --neutral-light: #EBDED7;
+  --secondary: #D1792C;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
-  font-family: 'euclid';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'euclid';
   background-color:#fbf2ed ;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hide {
+  display: none;
 }

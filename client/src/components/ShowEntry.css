@@ -20,7 +20,7 @@
     box-shadow: 0 0 2px 1px  rgba(93, 89, 89, 0.5);
     width: 400px;
     height: auto;
-    background-color: #c4d0a8;
+    background-color: var(--primary);
     padding: 1.5rem;
     margin: auto;}
 
