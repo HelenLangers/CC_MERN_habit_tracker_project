@@ -1,16 +1,44 @@
 
+.footer-container {
+    position: relative;
+}
+
+
 
 .FooterBar{  
-    padding:0;  
-    background:rgb(67, 204, 228);  
-    font-family:Arial, sans serif;  
-    font-size:15px;  
+    padding:12px;  
     width: 100%;
     text-align: center;
-    position: fixed;
+    position: inherit;
     left: 0;
     bottom: 0;
     list-style: none;
     color: white;
+    padding: 1em;
+    background-color: #426043;
+    position: relative;
 }
+
+
+.custom-shape-divider-bottom-1664370261 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1664370261 svg {
+    position: relative;
+    display: block;
+    width: calc(113% + 1.3px);
+    height: 41px;
+}
+
+.custom-shape-divider-bottom-1664370261 .shape-fill {
+    fill: #426043;
+}
+
 
