@@ -48,18 +48,19 @@ const Form = ({ onEntrySubmit }) => {
   
   return (
     <>
+    <h1>Step 2: choose a recipe below. Cook it up and add it to your meals!</h1>
     <form onSubmit={handleFormSubmit} id="form-container">
       <input type="text" className="form-input" 
       placeholder='Recipe'
       value={recipe || state.recipe.recipe.label}
-      onChange={handleRecipeChange}></input>
+      onChange={handleRecipeChange} contentEditable></input>
 
       <input type="date" className="form-input" 
       placeholder='Date'
       value={date}
       onChange={handleDateChange}></input>
 
-      <input type="text" className="form-input"  
+      <input id='notes' type="text" className="form-input"  
       placeholder='Notes'
       value={notes}
       onChange={handleNotesChange}></input>
