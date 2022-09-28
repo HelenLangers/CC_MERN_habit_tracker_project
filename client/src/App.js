@@ -44,7 +44,7 @@ function App() {
   const getRecipes = function(){
       fetch('https://api.edamam.com/api/recipes/v2?type=public&q=' + query + '&app_id=' + appId + '&app_key=' + myKey + '&diet=balanced')
       .then(res => res.json())
-      .then(recipes => setRecipes(recipes.hits))
+      .then(recipes => setRecipes(recipes.hits.splice(0, 9)))
   }
 
   const getRandomRecipe = function(){
