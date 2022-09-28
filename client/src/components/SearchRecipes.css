@@ -42,7 +42,7 @@
     font-size: 16px;
     font-weight: 100;
     letter-spacing: 2px;
-    border-radius: 10px;
+    border-radius: 48px;
     background: linear-gradient(to right, #FFFFFF 0%,#464747 #F9F9F9 100%);
     transition: 1s;
     outline: none;
@@ -75,10 +75,12 @@ i {
     border-width: 2px;
     margin: 0.75rem;
     padding: 0.5rem 0 0.5rem 0;
+    transform: translateY(var(--translate-y,0));
 } 
 
 .search-button:hover {
-
+    --translate-y: -2px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
 }
 
 .search-results {
