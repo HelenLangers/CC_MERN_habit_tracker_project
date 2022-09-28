@@ -52,7 +52,7 @@
 .title {
     font-size: 1rem;
     text-align: center;
-    /* margin: 1rem; */
+    margin: 1rem;
 }
 
 .image {
@@ -136,10 +136,10 @@ a {
 }
 
 @media (max-width: 800px) {
-    .card {
-        width: 70vw;
-    }
 
+    .card {
+        width: 85vw;
+    }
     .ingredients {
         font-size: 2vh;
         padding: 1rem;
