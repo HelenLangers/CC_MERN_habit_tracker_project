@@ -1,18 +1,37 @@
+@font-face {
+    font-family: 'milk';
+    src: url("../../public/MilkyCoffee.ttf");
+  }
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
 header h1 {
     font-size: 60px;
     font-weight: 600;
-    background-image: linear-gradient(to left, #5f37d8, #eeeaf3);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
     text-align: center;
-    margin-bottom: -25px;
+    font-family: 'milk';
+    margin-top: 0px;
+    padding-top: 1em;
+    color: #f5ebe5;
+    text-shadow: 2px 2px rgb(22, 12, 12);
   }
 
-.header {
+header {
     text-align: center;
-    font-family: cursive;
     font-size: 22px;
+    background-color: #426043;
+    margin: 0px;
+    color: #f5ebe5;
+    text-shadow: 1px 1px 1px rgb(22, 12, 12);
+    position: relative;
+}
+
+.bar {
+    height: 20px;
+    padding-top: 16px;
+    padding-right: 16px;
 }
 
 .toggle-button {
@@ -24,14 +43,30 @@ header h1 {
     justify-content: space-between;
     width: 30px;
     height: 21px;
+    
+}
+ .custom-shape-divider-bottom-1664367773 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
 
-.bar {
-    height: 20px;
-    width: 100%;
-    left: 2px;
-    padding-top: 15px;
+.custom-shape-divider-bottom-1664367773 svg {
+    position: relative;
+    display: block;
+    width: calc(102% + 1.3px);
+    height: 90px;
+    transform: rotateY(180deg);
+    
 }
+
+.custom-shape-divider-bottom-1664367773 .shape-fill {
+    fill: #FFFFFF;
+} 
+
 
 @media (max-width: 800px) {
     .toggle-button {
@@ -47,7 +82,7 @@ header h1 {
     .navbarlinks ul {
         width:100%;
         flex-direction: column;
-        background-color: transparent rgb(243, 117, 243);
+        background-color: transparent #426043;
         color: white;
     }
 
