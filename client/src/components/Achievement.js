@@ -7,7 +7,7 @@ const Achievement = ({entries}) => {
     if (entries.length >= 5 && entries.length <= 7) {
         levelTracker =
         <div>
-            <p>CongratulationsYou have reached Level 1.</p>
+            <p>Congratulations: You have reached Level 1.</p>
             <p>Mindfulness tip: Remove your smartphone from the kitchen. Attempting to do too many things at once decreases your ability to switch between tasks and makes you less able to focus on any one activity. Put your phone on silent and place it somewhere far away from the kitchen.</p>
         </div>
     } else if (entries.length >=8 && entries.length <= 15) {

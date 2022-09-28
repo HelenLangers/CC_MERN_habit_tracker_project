@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import './Form.css'
 
 const Form = ({ onEntrySubmit }) => {
+
+  const navigate = useNavigate()
 
   const location = useLocation();
   const state = location.state;
@@ -30,7 +32,7 @@ const Form = ({ onEntrySubmit }) => {
     const notesToSubmit = notes
     
     onEntrySubmit({
-      recipeName: recipeToSubmit,
+      recipeName: (recipeToSubmit ? recipeToSubmit : state.recipe.recipe.label),
       date: dateToSubmit,
       notes: notesToSubmit
     });
@@ -38,6 +40,8 @@ const Form = ({ onEntrySubmit }) => {
     setRecipe("");
     setDate("");
     setNotes("");
+
+    navigate('/entries')
 
     // console.log(recipeToSubmit, dateToSubmit, notes)
   }
