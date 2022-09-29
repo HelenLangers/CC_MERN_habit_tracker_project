@@ -64,6 +64,7 @@ const Form = ({ onEntrySubmit }) => {
           placeholder="Date"
           value={date}
           onChange={handleDateChange}
+          required
         ></input>
 
         <input
