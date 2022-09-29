@@ -2,9 +2,7 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './RecipeCard.css';
 
-function RecipeBack({ recipe }) {
-
-  const [recipeToAddToForm, setRecipeToAddToForm] = useState({recipe})
+function RecipeBack({ recipe, recipeToAddToForm }) {
 
   const ingredientsList = recipe.recipe.ingredientLines.map((ingredient, index) => {
     return (
