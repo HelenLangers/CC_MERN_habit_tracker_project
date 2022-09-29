@@ -6,8 +6,8 @@
     position: relative;
     border-radius: 48px;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
-    background-color: #426043;
-    height: 400px;
+    background-color: var(--primary);
+    min-height: 400px;
     width: 350px;
     transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y,0));
     transform-style: preserve-3d;
@@ -31,12 +31,15 @@
 .card .front,
 .card .back {
     position: absolute;
-    padding: 2rem;
+    height: 100%;
     backface-visibility: hidden;
 }
 
 .card .back {
     transform: rotateY(180deg);
+    background-color: var(--primary-dark);
+    border-radius: 48px;
+    color: white;
 }
 
 .front-container {
@@ -44,7 +47,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 400px;
     width: 350px;
     padding: 2rem;
 }
@@ -70,9 +72,7 @@
 .ingredients {
     display: flex;
     flex-direction: column;
-    margin: 0.5rem;
     font-size: 1.75vh;
-    overflow: scroll;
 }
 
 .ingredients-list {
@@ -83,10 +83,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    height: 400px;
+    justify-content: space-between;
+    height: 100%;
     width: 350px;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 
 
@@ -94,14 +94,13 @@
     display: flex;
     justify-content: space-around;
     padding: 1rem;
-    margin: 0.5rem;
 }
 
 .button-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    background:#C4D0A8;
+    background:var(--primary);
     color: #2A1915;
     font-size: 1rem;
     line-height: 2.5rem;
@@ -117,20 +116,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background:#C4D0A8;
-    color: #2A1915 ;
+    background: var(--primary);
+    color: var(--neutral-dark) ;
     font-size: 1rem;
     line-height: 3rem;
     border-radius: 48px;
     width: 6rem;
     margin: 0 0.5rem;
-    border: rgb(75, 74, 74);
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
     border-width: 2px;
 }
 
 a {
-    color: #000;
+    color: var(--neutral-dark);
     text-decoration: none;
     margin: 5px;
 }
@@ -142,7 +140,7 @@ a {
     }
     .ingredients {
         font-size: 2vh;
-        padding: 1rem;
+        padding: 0 1rem;
     }
 
     .ingredients-header {

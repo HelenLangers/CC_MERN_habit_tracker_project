@@ -54,7 +54,7 @@ const UpdateEntry = ({entries, entryToUpdate}) => {
 
   return (
     <>
-    <h1>Update an entry:</h1>
+    <h3>Update an entry:</h3>
     <form id="form-container" onSubmit={handleFormEdit}>
       <input type="text" className="form-input" defaultValue={selectedEntryForEdit.recipeName} placeholder={selectedEntryForEdit.recipeName} onChange={handleRecipeEdit} contentEditable></input>
 

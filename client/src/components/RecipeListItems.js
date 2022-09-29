@@ -8,6 +8,7 @@ const RecipeListItems = ({ recipe }) => {
   const [flip, setFlip] = useState(false)
 
   return (
+    
     <div className={`card ${flip ? 'flip' : ''}`} onClick={() => setFlip(!flip)}>
       <div className="front">
         <RecipeFront recipe={recipe}/>
@@ -16,6 +17,7 @@ const RecipeListItems = ({ recipe }) => {
         <RecipeBack recipe={recipe}/>
       </div>
     </div>
+  
   )
 }
 

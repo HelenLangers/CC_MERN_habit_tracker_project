@@ -16,7 +16,7 @@ const NavBar = () => {
             <Link to="/randomiser" className="nav_links">Random Recipe!</Link>
           </li> */}
           <li className="navlist">
-            <Link to="/entries" className="nav_links">My Entries</Link>
+            <Link to="/entries" className="nav_links">My Journal</Link>
           </li>
           <li className="navlist">
             <Link to="/searchrecipes" className="nav_links">New Entry</Link>

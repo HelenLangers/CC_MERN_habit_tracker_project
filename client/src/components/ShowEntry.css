@@ -3,6 +3,21 @@
 .editButtons {
     margin-left: 6px;
     margin-right: 6px;
+    background-color: var(--neutral-light);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+    width: fit-content;
+    border-radius: 25px;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: var(--neutral-dark);
+    margin-top: 1em;
+    font-family: 'euclid';
+    border: none;
+}
+
+a {
+    color: var(--neutral-dark); 
 }
 
 .entryDate {
@@ -20,10 +35,14 @@
     box-shadow: 0 0 2px 1px  rgba(93, 89, 89, 0.5);
     width: 400px;
     height: auto;
-    background-color: #c4d0a8;
+    background-color: var(--primary);
     padding: 1.5rem;
-    margin: auto;}
+    margin: auto;
+    color: white;
+}
 
 .selectedEntry h3 {
     text-align: center;
+    color: white;
 }
+

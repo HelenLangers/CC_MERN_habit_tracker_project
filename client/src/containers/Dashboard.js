@@ -14,8 +14,8 @@ const Dashboard = ({entries, recipe, getRandomRecipe}) => {
   return (
     <div className='dashboard'>
       <div className='dashboard-item'><Counter entries={entries}/></div>
-      <div className='dashboard-item'><Achievement entries={entries}/></div>
       <div className='dashboard-item'><Chart entries={entries}/></div>
+      <div className='dashboard-item'><Achievement entries={entries}/></div>
       <div className='dashboard-item'><RandomRecipe recipe={recipe} getRandomRecipe={getRandomRecipe}/></div>
      
     </div>
