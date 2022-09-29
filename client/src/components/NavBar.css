@@ -25,6 +25,7 @@
 .navlist :hover {
     color: #fbf2ed ;
     background-color: #779a78;
+    border-radius: 48px;
 }
 
 @media (max-width: 800px) {

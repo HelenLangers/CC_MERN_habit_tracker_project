@@ -7,6 +7,10 @@
     min-width: 350px;
 }
 
+.counter-container>h3 {
+    color: white;
+}
+
 .number-of-meals {
     color: white;
     text-align: center;

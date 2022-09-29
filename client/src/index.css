@@ -17,11 +17,12 @@
         */
 
 :root {
-  --primary: #b2bd98;
-  --primary-dark: #426043;
+  --primary: #8b9f5e;
+  --primary-light: #b9c996;
+  --primary-dark: #304e3b;
   --neutral-dark: #251f1d;
   --neutral-light: #EBDED7;
-  --secondary: #D1792C;
+  --secondary: #dea550;
   box-sizing: border-box;
 }
 *,

@@ -1,8 +1,12 @@
 .achievementBox {
-    background-color: var(--primary);
+    background-color: var(--secondary);
     border-radius: 48px;
     padding: 1.5rem;
     color: white;
     text-align: center;
     width: 350px;
+}
+
+h5 {
+    margin: 0px;
 }

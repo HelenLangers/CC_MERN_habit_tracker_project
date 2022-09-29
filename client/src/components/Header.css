@@ -1,7 +1,7 @@
 header {
   text-align: center;
   font-size: 22px;
-  background-color: #426043;
+  background-color: var(--primary-dark);
   margin: 0px;
   color: #f5ebe5;
   position: relative;
@@ -12,10 +12,15 @@ header h1 {
   font-weight: 600;
   text-align: center;
   font-family: "milk";
-  margin-top: 0px;
+  margin: 0px;
   padding-top: 1em;
   color: #f5ebe5;
   text-shadow: 2px 2px rgb(22, 12, 12);
+}
+
+header a {
+  margin:0px;
+  padding: 0px;
 }
 
 header p {

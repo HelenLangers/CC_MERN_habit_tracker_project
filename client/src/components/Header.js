@@ -36,8 +36,8 @@ const Header = () => {
         className="toggle-button fa-solid fa-burger fa-2xl"
         onClick={toggleMenu}
       />
-      <h1>Holy Shiitake!</h1>
-      <p>a mindful eating app</p>
+      <a href="/"><h1>Holy Shiitake!</h1></a>
+      <p>a mindful cooking app</p>
       <div class="wave">
         <svg
           data-name="Layer 1"
