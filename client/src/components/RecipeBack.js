@@ -12,7 +12,7 @@ function RecipeBack({ recipe }) {
     })
 
   return (
-    <div className="back-container">
+    <>
       <div className="ingredients">
       <h3 className="ingredients-header">Ingredients:</h3>
       {ingredientsList}
@@ -26,7 +26,7 @@ function RecipeBack({ recipe }) {
             Add Entry</Link>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
