@@ -79,7 +79,7 @@ const Achievement = ({ entries }) => {
         </p>
       </div>
     );
-  } else if (entries.length >= 26 && entries.length <= 35) {
+  } else if (entries.length >= 10 && entries.length <= 35) {
     levelTracker = (
         
       <div className="achievementBox">
