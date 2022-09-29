@@ -41,13 +41,11 @@ const Form = ({ onEntrySubmit }) => {
     setNotes("");
 
     navigate("/entries");
-
-    // console.log(recipeToSubmit, dateToSubmit, notes)
   };
 
   return (
     <>
-      <h3>Mmm, delicious!</h3>
+      <h3>Step 2: Add It To Your Journal</h3>
       <form onSubmit={handleFormSubmit} id="form-container">
         <input
           type="text"

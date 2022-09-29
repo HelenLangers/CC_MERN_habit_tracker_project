@@ -129,10 +129,6 @@ function App() {
             }
           />
           <Route
-            path="/searchrecipes"
-            element={<SearchRecipes recipes={recipes} setQuery={setQuery} />}
-          />
-          <Route
             path="/entries"
             element={
               <EntryList
