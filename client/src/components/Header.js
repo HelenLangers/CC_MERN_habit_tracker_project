@@ -22,12 +22,12 @@ const Header = () => {
           </li>
           <li>
             <Link to="/entries" onClick={toggleMenu}>
-              Show entries
+              My Journal
             </Link>
           </li>
           <li>
             <Link to="/searchrecipes" onClick={toggleMenu}>
-              Search Recipes
+              New Entry
             </Link>
           </li>
         </ul>
