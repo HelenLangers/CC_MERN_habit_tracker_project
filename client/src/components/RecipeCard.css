@@ -32,6 +32,7 @@
 .card .back {
     position: absolute;
     height: 100%;
+    width: fit-content;
     backface-visibility: hidden;
 }
 
@@ -40,6 +41,7 @@
     background-color: var(--primary-dark);
     border-radius: 48px;
     color: white;
+    width: 350px;
 }
 
 .front-container {
@@ -73,6 +75,9 @@
     display: flex;
     flex-direction: column;
     font-size: 1.75vh;
+    overflow: scroll;
+    max-height: 300px;
+    padding: 1.5rem;
 }
 
 .ingredients-list {
@@ -87,6 +92,7 @@
     height: 100%;
     width: 350px;
     padding: 0 2rem;
+    overflow: scroll;
 }
 
 
@@ -110,6 +116,7 @@
     border: rgb(75, 74, 74);
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
     border-width: 2px;
+    transform: translateY(var(--translate-y,0));
 }
 
 .add-entry-button {
@@ -125,6 +132,17 @@
     margin: 0 0.5rem;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
     border-width: 2px;
+    transform: translateY(var(--translate-y,0));
+}
+
+.button-box:hover {
+    --translate-y: -2px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+}
+
+.add-entry-button:hover {
+    --translate-y: -2px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5); 
 }
 
 a {
@@ -132,6 +150,8 @@ a {
     text-decoration: none;
     margin: 5px;
 }
+
+
 
 @media (max-width: 800px) {
 
