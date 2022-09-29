@@ -53,7 +53,7 @@ const Achievement = ({ entries }) => {
       <div className="achievementBox">
         <h4>Level 3: Sous Chef</h4>
         <h5>&#11088; &#11088; &#11088;</h5>
-        <img width={180} height="auto" src="./david.png" alt="sous chef"></img>
+        <img width={180} height="auto" src="./chefDavid.png" alt="sous chef"></img>
         <p> Wow, you're doing great!</p>
         <h4>Mindfulness tip:</h4>
         <p>
