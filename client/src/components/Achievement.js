@@ -3,7 +3,7 @@ import "./Achievement.css";
 
 const Achievement = ({ entries }) => {
   let levelTracker;
-  if (entries.length >= 0 && entries.length <= 4) {
+  if (entries.length >= 0 && entries.length <= 6) {
     levelTracker = (
       <div className="achievementBox">
         <h4>Level 1: Junior Chef</h4>
