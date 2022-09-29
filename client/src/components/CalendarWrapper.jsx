@@ -33,7 +33,7 @@ const CalendarWrapper = ({ entries, handleDelete }) => {
 
     </div>
 <div className="entry-cards">
-    <ul>
+    <ul className="padding-be-gone">
       {entryCards}
     </ul>
     </div>

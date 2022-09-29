@@ -3,6 +3,8 @@
     display: flex;
     margin: 32px;
     justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 .calendar {
@@ -12,4 +14,8 @@
     list-style-type: none;
     margin: 2rem;
 
+}
+
+.padding-be-gone {
+    padding: 0px
 }
