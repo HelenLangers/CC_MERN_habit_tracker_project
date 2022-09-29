@@ -28,7 +28,7 @@ db.entries.insertMany([
         notes: "That's all you can say",
     },
     {
-        recipeName: "Cheese and egg stir fry",
+        recipeName: "Tomato and egg stir fry",
         date: "2022-09-25",
         notes: "Mmmmm comfort food",
     },
