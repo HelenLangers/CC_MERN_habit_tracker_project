@@ -27,7 +27,7 @@ const Achievement = ({ entries }) => {
         </p>
       </div>
     );
-  } else if (entries.length >= 5 && entries.length <= 8) {
+  } else if (entries.length == 7) {
     levelTracker = (
       <div className="achievementBox">
         <h4>Level 2: Chef de Partie</h4>
@@ -48,7 +48,7 @@ const Achievement = ({ entries }) => {
         </p>
       </div>
     );
-  } else if (entries.length >= 9 && entries.length <= 14) {
+  } else if (entries.length == 8) {
     levelTracker = (
       <div className="achievementBox">
         <h4>Level 3: Sous Chef</h4>
@@ -63,7 +63,7 @@ const Achievement = ({ entries }) => {
         </p>
       </div>
     );
-  } else if (entries.length >= 15 && entries.length <= 25) {
+  } else if (entries.length == 9) {
     levelTracker = (
         <div className="achievementBox">
         <h4>Level 4: Head Chef</h4>
