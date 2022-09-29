@@ -2,16 +2,7 @@ use habit_entries;
 db.dropDatabase();
 
 db.entries.insertMany([
-    {
-        recipeName: "Pasta Bolognese",
-        date: "2022-09-24",
-        notes: "Absolutely delicious, 10/10 would cook again",
-    },
-    {
-        recipeName: "Macaroni Cheese",
-        date: "2022-09-24",
-        notes: "Nice notes",
-    },
+
     {
         recipeName: "Fish Tacos",
         date: "2022-09-21",
