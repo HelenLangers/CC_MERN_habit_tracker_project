@@ -53,27 +53,35 @@ Nowadays everyone is trying to build or break a habit. But it's tricky to keep t
 Habit to track: Home-cooked-meal frequency and mindfulness.
 
 The App can:
-
-# MVP
-A user should be able to:
-
-* Search the API for recipe ideas (view some)
-* Select a recipe (view one)
-* Add a meal to their "Cooked Meals" (add a recipe, date and opinion)
-* Remove a meal from their "Cooked Meals"
-* View a chart that shows the frequency of home-cooked-meals and any notes the user added
-
-
-# Extensions
-* Add a 'next page' to the search results 
-* Be able to add a recipe to a favourite recipe list for later use
-* Split total meals into a daily meal list
-
+* Allow a user to search for recipes based on a key word, e.g. ingredient
+* Fetches a random recipe from the API and re-fetches based on a button press
+* Presents each recipe with ingredients, an external link and an 'add to entry' button
+* Create a diary entry including the recipe name, a date and notes from the user
+* Displays the dates a user has entered a diary entry on
+* Counts the overall number of entries and shows the user a 'level' of cooking they've achieved
 
 # Responsibilities
+
+# David
+* CRUD actions on the app - add, delete, edit.
+* Navbar/hamburger menu
+* Mindfulness tip and reward system.
+
+
 # Helen
 * Understand and connect to the API
 * Render out the results from the API using a flip card visual
+
+# Mhairi
+* Add an interactive calendar
+* Connect the calendar to the entries data
+* Style the calendar to reflect dates of entries
+* Add a counter for total number of meals made 
+
+# Stephen
+* Add entry form, plus style
+* Update entry form, plus style
+* CRUD actions - add, delete, update
 
 
 
@@ -111,9 +119,8 @@ in both client and server (see below)
 ```sh
 git clone git@github.com:HelenLangers/Holy_Shiitake_habit_tracker_project.git
 ```
-2. Navigate via Terminal to the folder
-3. Create a free account on https://developer.edamam.com/edamam-recipe-api
-4. Within the client/src folder create a config.js file:
+2. Create a free account on https://developer.edamam.com/edamam-recipe-api
+3. Within the client/src folder create a config.js file:
 ```sh
 const config = {
     app_id: ' ',
@@ -122,7 +129,7 @@ const config = {
 
 export default config
 ```
-5. Install the necessary dependencies
+4. Install the necessary dependencies
 ```sh
 cd client
 npm ci
@@ -130,21 +137,21 @@ npm ci
 cd server
 npm ci
 ```
-6. Run the seeds file in the server folder
+5. Run the seeds file in the server folder
 ```sh
 npm run seeds
 ```
-7. Start the server
+6. Start the server
 ```sh
 npm run server:dev
 ```
-8. Start the client
+7. Start the client
 ```sh
 ..
 cd client
 npm start
 ```
-9. This will automatically open the app in Chrome.
+8. This will automatically open the app in Chrome.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
