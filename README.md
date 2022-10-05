@@ -52,6 +52,8 @@ Nowadays everyone is trying to build or break a habit. But it's tricky to keep t
 
 Habit to track: Home-cooked-meal frequency and mindfulness.
 
+The App can:
+
 # MVP
 A user should be able to:
 
@@ -66,6 +68,12 @@ A user should be able to:
 * Add a 'next page' to the search results 
 * Be able to add a recipe to a favourite recipe list for later use
 * Split total meals into a daily meal list
+
+
+# Responsibilities
+# Helen
+* Understand and connect to the API
+* Render out the results from the API using a flip card visual
 
 
 
@@ -101,9 +109,14 @@ in both client and server (see below)
 
 1. Clone the repo
    ```sh
-   git clone git@github.com:HelenLangers/CC_Project2_MERN_HolyShiitake_habit_tracker.git
+   git clone git@github.com:HelenLangers/Holy_Shiitake_habit_tracker_project.git
    ```
 2. Navigate via Terminal to the folder
+
+
+say either sign up or get it hosted
+
+
 3. Install the necessary dependencies
 ```sh
 cd client
@@ -136,7 +149,7 @@ npm start
 
 Helen Langridge - [Twitter](https://twitter.com/HelenCycling) - [LinkedIn](https://www.linkedin.com/in/helen-langridge-62b32b166/)
 
-Project Link: [https://github.com/HelenLangers/CC_MERN_habit_tracker_project](https://github.com/HelenLangers/CC_MERN_habit_tracker_project)
+Project Link: [Github](https://github.com/HelenLangers/CC_MERN_habit_tracker_project)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -147,7 +160,7 @@ Project Link: [https://github.com/HelenLangers/CC_MERN_habit_tracker_project](ht
 
 * [CodeClan](https://codeclan.com/)
 * [FontAwesome](https://fontawesome.com/)
-* [EdamamAPI] (https://www.edamam.com/)
+* [EdamamAPI](https://www.edamam.com/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -1,8 +1,3 @@
-# Mhairi Lou can collaborate huzzah
-# David can do it also! *pumps fists*
-#Stephen checking in.
-
-
 # Habit Tracker brief
 Nowadays everyone is trying to build or break a habit. But it's tricky to keep track of them. Identify a habit you'd like to help someone break or build (e.g. alcohol consumption, smoking, calories, exercise, healthy eating...) and make an app to help.
 * Make CRUD entries on the front-end that are persisted on a MongoDB database on the back-end
