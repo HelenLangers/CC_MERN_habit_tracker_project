@@ -3,8 +3,6 @@ import Calendar from "./Calendar";
 import ShowEntry from "./ShowEntry";
 import "./CalendarWrapper.css"
 
-//Calendar renders out an interactive calendar highlighting days with entries.
-
 const CalendarWrapper = ({ entries, handleDelete }) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
 

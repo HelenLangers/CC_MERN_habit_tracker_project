@@ -108,16 +108,21 @@ in both client and server (see below)
 ### Installation
 
 1. Clone the repo
-   ```sh
-   git clone git@github.com:HelenLangers/Holy_Shiitake_habit_tracker_project.git
-   ```
+```sh
+git clone git@github.com:HelenLangers/Holy_Shiitake_habit_tracker_project.git
+```
 2. Navigate via Terminal to the folder
+3. Create a free account on https://developer.edamam.com/edamam-recipe-api
+4. Within the client/src folder create a config.js file:
+```sh
+const config = {
+    app_id: ' ',
+    app_key: ' '
+}
 
-
-say either sign up or get it hosted
-
-
-3. Install the necessary dependencies
+export default config
+```
+5. Install the necessary dependencies
 ```sh
 cd client
 npm ci
@@ -125,21 +130,21 @@ npm ci
 cd server
 npm ci
 ```
-4. Run the seeds file in the server folder
-  ```sh
-  npm run seeds
-  ```
-5. Start the server
-  ```sh
-  npm run server:dev
-  ```
-6. Start the client
+6. Run the seeds file in the server folder
+```sh
+npm run seeds
+```
+7. Start the server
+```sh
+npm run server:dev
+```
+8. Start the client
 ```sh
 ..
 cd client
 npm start
 ```
-7. This should automatically open the app in Chrome.
+9. This will automatically open the app in Chrome.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
